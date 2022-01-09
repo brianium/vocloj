@@ -1,0 +1,6 @@
+{:paths ["src/cljs" "src/cljc" "target" "resources"]
+ :deps {org.clojure/core.async {:mvn/version "1.5.648"}}
+ :aliases
+ {:dev {:extra-deps  {com.bhauman/figwheel-main {:mvn/version "0.2.15"}
+                      integrant/integrant       {:mvn/version "0.8.0"}}
+        :extra-paths ["dev"]}}}
