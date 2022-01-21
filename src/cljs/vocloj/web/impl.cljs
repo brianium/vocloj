@@ -79,7 +79,7 @@
 
   (-stop
    [this]
-   (core/transition this :stop nil)))
+   (core/transition this :stop)))
 
 (defn on-ready
   "When the speech recognizer switches to a ready state, add necessary

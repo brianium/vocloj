@@ -9,6 +9,7 @@ sweet sweet parens.
 
 - [Using vocloj](#using-vocloj)
     - [Web](#vocloj.web)
+- [API Docs](https://cljdoc.org/d/com.github.brianium/vocloj/CURRENT)
 - [State machines](#state-machines)
     - [add-effect](#add-effect)
     - [current-state](#current-state)
