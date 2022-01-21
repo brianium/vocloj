@@ -1,4 +1,4 @@
-(ns vocloj.web.impl
+(ns ^:no-doc vocloj.web.impl
   (:require [clojure.string :as string]
             [cljs.core.async :as async]
             [vocloj.core :as core :refer [StateMachine RecognizesSpeech Initializes SynthesizesSpeech]]

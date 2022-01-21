@@ -1,4 +1,4 @@
-(ns vocloj.state.impl
+(ns ^:no-doc vocloj.state.impl
   "A default implementation of vocloj state machines backed
    by atoms."
   (:require [vocloj.core :refer [StateMachine]]))
