@@ -1,4 +1,6 @@
 (ns vocloj.web
+  "Provides speech recognition and synthesis via native web browser
+   APIs"
   (:require [vocloj.web.impl :as impl]))
 
 (defn create-recognizer

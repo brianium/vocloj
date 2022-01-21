@@ -203,7 +203,8 @@
        (->WebSpeechSynthesizer)
        (core/add-effect :speak :ready :speaking on-speak)
        (core/add-effect :pause :speaking :paused on-pause)
-       (core/add-effect :resume :paused :speaking on-resume))))
+       (core/add-effect :resume :paused :speaking on-resume)
+       (core/init))))
 
 (defn remove-listeners
   "This is relevant only to web synthesizers. There is a single

@@ -63,8 +63,7 @@
   prev)
 
 (defmethod ig/init-key ::synthesizer [_ _]
-  (vocloj/init
-   (web/create-synthesizer r/atom)))
+  (web/create-synthesizer r/atom))
 
 (defmethod ig/halt-key! ::synthesizer [_ synth]
   (web/remove-listeners synth))
