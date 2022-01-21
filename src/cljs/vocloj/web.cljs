@@ -7,5 +7,18 @@
    (impl/create-recognizer))
   ([options]
    (impl/create-recognizer options))
-  ([state-machine options]
-   (impl/create-recognizer state-machine options)))
+  ([options atom-fn]
+   (impl/create-recognizer options atom-fn)))
+
+(defn create-synthesizer
+  "Create a speech synthesizer backed by native browser apis"
+  ([]
+   (impl/create-synthesizer))
+  ([atom-fn]
+   (impl/create-synthesizer atom-fn)))
+
+(defn remove-listeners
+  "Remove global listeners from the single speechSynthesis object
+   present on the browser window"
+  [synth]
+  (impl/remove-listeners synth))

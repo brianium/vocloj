@@ -1,10 +1,10 @@
-(ns vocloj.dev
+(ns vocloj.dev.recognizer
   (:require [vocloj.core :as vocloj]
             [vocloj.web :as web]
             [integrant.core :as ig]))
 
 (defn log-state
-  [old new]
+  [_ old new]
   (println "Previous:")
   (println old)
   (println)
@@ -16,8 +16,8 @@
 
 (def config
   {::recognizer  {:continuous? true}
-   ::buttons     {:selector/start "#start"
-                  :selector/stop  "#stop"}
+   ::buttons     {:selector/start "#start-recognition"
+                  :selector/stop  "#stop-recognition"}
    ::application {:buttons    (ig/ref ::buttons)
                   :recognizer (ig/ref ::recognizer)}})
 
@@ -47,9 +47,5 @@
     (.removeEventListener start-button start-event on-start)
     (.removeEventListener stop-button stop-event on-stop)))
 
-(defonce system
-  (ig/init config))
-
-(defn restart []
-  (ig/halt! system)
-  (ig/resume config system))
+(defn start []
+  [(ig/init config) config])

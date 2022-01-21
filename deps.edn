@@ -1,6 +1,9 @@
 {:paths ["src/cljs" "src/cljc" "target" "resources"]
  :deps {org.clojure/core.async {:mvn/version "1.5.648"}}
  :aliases
- {:dev {:extra-deps  {com.bhauman/figwheel-main {:mvn/version "0.2.15"}
-                      integrant/integrant       {:mvn/version "0.8.0"}}
-        :extra-paths ["dev"]}}}
+ {:dev {:extra-deps  {cljsjs/react              {:mvn/version "17.0.2-0"}
+                      cljsjs/react-dom          {:mvn/version "17.0.2-0"}
+                      com.bhauman/figwheel-main {:mvn/version "0.2.15"}
+                      integrant/integrant       {:mvn/version "0.8.0"}
+                      reagent/reagent           {:mvn/version "1.1.0"}}
+        :extra-paths ["dev/cljs"]}}}

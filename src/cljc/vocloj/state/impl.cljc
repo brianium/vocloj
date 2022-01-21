@@ -12,9 +12,9 @@
         (reset! *state {:state next
                         :data  payload}))))
 
-  (-add-effect [_ key fn-2]
+  (-add-effect [this key fn-3]
     (add-watch *state key (fn [_ _ old new]
-                            (fn-2 old new))))
+                            (fn-3 this old new))))
 
   (-current-state [_]
     @*state))
