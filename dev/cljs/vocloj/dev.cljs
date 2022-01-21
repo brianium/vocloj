@@ -2,7 +2,6 @@
   (:require [integrant.core :as ig]
             [reagent.core :as r]
             [reagent.dom :as rdom]
-            [vocloj.core :as vocloj]
             [vocloj.dev.recognizer :as recog :refer [recognizer]]
             [vocloj.dev.synthesizer :refer [synthesizer]]
             [vocloj.web :as web]))
