@@ -4,7 +4,7 @@
   (:require #?(:clj  [clojure.core.async :as async]
                :cljs [cljs.core.async :as async])))
 
-;;; Core protocols and functions
+;;; State machine API
 
 (defprotocol StateMachine
   (-add-effect [_ key fn-3] "Add a side effect that is invoked when a change to state happens. Is called with the state machine, previous, and next state")
@@ -45,6 +45,8 @@
   [sm]
   (-current-state sm))
 
+;;; Initialization API
+
 (defprotocol Initializes
   (-init  [_] "Initialize a type. Useful for setting up event streams and necessary resources"))
 
@@ -54,7 +56,7 @@
   (-init initializable)
   initializable)
 
-;;; Core speech recognition API
+;;; Speech recognition API
 
 (defprotocol RecognizesSpeech
   (-start [_] "Start speech recognition. Returns a channel that receives results")
@@ -97,7 +99,7 @@
            (recur))))
      recognizer)))
 
-;;; Core speech synthesis API
+;;; Speech synthesis API
 
 (defprotocol SynthesizesSpeech
   (-cancel [_] "Cancel all speech, including any enqueued for further utterance")
