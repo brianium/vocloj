@@ -3,6 +3,8 @@
 You talk to the computer. The computer talks to you. Brought to you by
 sweet sweet parens.
 
+[![cljdoc badge](https://cljdoc.org/badge/com.github.brianium/vocloj)](https://cljdoc.org/d/com.github.brianium/vocloj/CURRENT) [![Clojars Project](https://img.shields.io/clojars/v/com.github.brianium/vocloj.svg)](https://clojars.org/com.github.brianium/vocloj)
+
 ## Table of contents
 
 - [Using vocloj](#using-vocloj)
