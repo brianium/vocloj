@@ -20,7 +20,7 @@
                 :version version
                 :basis basis
                 :src-dirs ["src/cljc" "src/cljs"]
-                :scm {:url                 "https://github.com/brianium/vocloj.git"
+                :scm {:url                 "https://github.com/brianium/vocloj"
                       :connection          "scm:git:git://github.com/brianium/vocloj.git"
                       :developerConnection "scm:git:git://github.com/brianium/vocloj.git"
                       :tag                 "HEAD"}})
