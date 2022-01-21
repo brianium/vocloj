@@ -19,12 +19,12 @@
                 :lib lib
                 :version version
                 :basis basis
-                :src-dirs ["src"]
+                :src-dirs ["src/cljc" "src/cljs"]
                 :scm {:url                 "https://github.com/brianium/vocloj.git"
                       :connection          "scm:git:git://github.com/brianium/vocloj.git"
                       :developerConnection "scm:git:git://github.com/brianium/vocloj.git"
                       :tag                 "HEAD"}})
-  (b/copy-dir {:src-dirs ["src"]
+  (b/copy-dir {:src-dirs ["src/cljc" "src/cljs"]
                :target-dir class-dir})
   (b/jar {:class-dir class-dir
           :jar-file jar-file}))

@@ -1,4 +1,4 @@
-{:paths ["src/cljs" "src/cljc" "target" "target/cljc" "target/cljs"  "resources"]
+{:paths ["src/cljs" "src/cljc" "target" "resources"]
  :deps {org.clojure/core.async {:mvn/version "1.5.648"}}
  :aliases
  {:build {:deps {io.github.clojure/tools.build {:git/tag "v0.7.2" :git/sha "0361dde"}}
