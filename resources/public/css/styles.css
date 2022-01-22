@@ -12,6 +12,11 @@
 
 html {
     height: 100vh;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
 body {
@@ -27,6 +32,7 @@ pre {
     overflow-x: auto;
     padding: 0.2em 2em;
     white-space: pre-wrap;
+    width: 100%;
 }
 
 .button {
