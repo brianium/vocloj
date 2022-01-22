@@ -53,6 +53,14 @@ The caveat to using the vocloj's web interface is that most browsers require use
 
 See the demo app for an example.
 
+#### Browser support
+
+At the time of this writing, Chrome has the best support for speech recognition by far.
+
+It does work in Safari, but it has gotten so bad as to be nearly unusable (though technically supported).
+
+See [browser compatability table](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition#browser_compatibility)
+
 ## State machines
 
 Speech synthesizers and speech recognizers implement a simple state machine protocol. It is useful
