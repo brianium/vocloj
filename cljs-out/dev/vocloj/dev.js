@@ -20,18 +20,18 @@ var screen = cljs.core.cst$kw$nav_SLASH_screen.cljs$core$IFn$_invoke$arity$1(clj
 return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$div$application,new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [vocloj.dev.nav,screen,_STAR_state], null),((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(screen,cljs.core.cst$kw$synth))?new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [vocloj.dev.synthesizer.synthesizer,_STAR_state,synth], null):new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [vocloj.dev.recognizer.recognizer,_STAR_state,recognition,recog_handler], null))], null);
 });
 vocloj.dev.config = new cljs.core.PersistentArrayMap(null, 5, [cljs.core.cst$kw$vocloj$dev_SLASH_state,new cljs.core.PersistentArrayMap(null, 7, [cljs.core.cst$kw$nav_SLASH_screen,cljs.core.cst$kw$synth,cljs.core.cst$kw$synth_SLASH_voice_DASH_id,"Alex",cljs.core.cst$kw$synth_SLASH_text,"",cljs.core.cst$kw$synth_SLASH_pitch,1.0,cljs.core.cst$kw$synth_SLASH_rate,1.0,cljs.core.cst$kw$synth_SLASH_volume,1.0,cljs.core.cst$kw$recog_SLASH_transcript,null], null),cljs.core.cst$kw$vocloj$dev_SLASH_synthesizer,cljs.core.PersistentArrayMap.EMPTY,cljs.core.cst$kw$vocloj$dev_SLASH_recognizer,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$options,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$continuous_QMARK_,true], null)], null),cljs.core.cst$kw$vocloj$dev_SLASH_recog_DASH_handler,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$state,integrant.core.ref(cljs.core.cst$kw$vocloj$dev_SLASH_state)], null),cljs.core.cst$kw$vocloj$dev_SLASH_ui,new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$recog_DASH_handler,integrant.core.ref(cljs.core.cst$kw$vocloj$dev_SLASH_recog_DASH_handler),cljs.core.cst$kw$state,integrant.core.ref(cljs.core.cst$kw$vocloj$dev_SLASH_state),cljs.core.cst$kw$synth,integrant.core.ref(cljs.core.cst$kw$vocloj$dev_SLASH_synthesizer),cljs.core.cst$kw$recognizer,integrant.core.ref(cljs.core.cst$kw$vocloj$dev_SLASH_recognizer)], null)], null);
-integrant.core.init_key.cljs$core$IMultiFn$_add_method$arity$3(null,cljs.core.cst$kw$vocloj$dev_SLASH_recog_DASH_handler,(function (_,p__23162){
-var map__23163 = p__23162;
-var map__23163__$1 = (((((!((map__23163 == null))))?(((((map__23163.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__23163.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__23163):map__23163);
-var state = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__23163__$1,cljs.core.cst$kw$state);
+integrant.core.init_key.cljs$core$IMultiFn$_add_method$arity$3(null,cljs.core.cst$kw$vocloj$dev_SLASH_recog_DASH_handler,(function (_,p__20966){
+var map__20967 = p__20966;
+var map__20967__$1 = (((((!((map__20967 == null))))?(((((map__20967.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__20967.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__20967):map__20967);
+var state = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20967__$1,cljs.core.cst$kw$state);
 return (function (message){
 return vocloj.dev.recognizer.handler(message,state);
 });
 }));
-integrant.core.init_key.cljs$core$IMultiFn$_add_method$arity$3(null,cljs.core.cst$kw$vocloj$dev_SLASH_recognizer,(function (_,p__23165){
-var map__23166 = p__23165;
-var map__23166__$1 = (((((!((map__23166 == null))))?(((((map__23166.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__23166.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__23166):map__23166);
-var options = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__23166__$1,cljs.core.cst$kw$options);
+integrant.core.init_key.cljs$core$IMultiFn$_add_method$arity$3(null,cljs.core.cst$kw$vocloj$dev_SLASH_recognizer,(function (_,p__20969){
+var map__20970 = p__20969;
+var map__20970__$1 = (((((!((map__20970 == null))))?(((((map__20970.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__20970.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__20970):map__20970);
+var options = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20970__$1,cljs.core.cst$kw$options);
 return vocloj.web.create_recognizer.cljs$core$IFn$_invoke$arity$2(options,reagent.core.atom);
 }));
 integrant.core.init_key.cljs$core$IMultiFn$_add_method$arity$3(null,cljs.core.cst$kw$vocloj$dev_SLASH_state,(function (_,initial){
@@ -46,13 +46,13 @@ return vocloj.web.create_synthesizer.cljs$core$IFn$_invoke$arity$1(reagent.core.
 integrant.core.halt_key_BANG_.cljs$core$IMultiFn$_add_method$arity$3(null,cljs.core.cst$kw$vocloj$dev_SLASH_synthesizer,(function (_,synth){
 return vocloj.web.remove_listeners(synth);
 }));
-integrant.core.init_key.cljs$core$IMultiFn$_add_method$arity$3(null,cljs.core.cst$kw$vocloj$dev_SLASH_ui,(function (_,p__23168){
-var map__23169 = p__23168;
-var map__23169__$1 = (((((!((map__23169 == null))))?(((((map__23169.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__23169.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__23169):map__23169);
-var state = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__23169__$1,cljs.core.cst$kw$state);
-var synth = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__23169__$1,cljs.core.cst$kw$synth);
-var recognizer = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__23169__$1,cljs.core.cst$kw$recognizer);
-var recog_handler = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__23169__$1,cljs.core.cst$kw$recog_DASH_handler);
+integrant.core.init_key.cljs$core$IMultiFn$_add_method$arity$3(null,cljs.core.cst$kw$vocloj$dev_SLASH_ui,(function (_,p__20972){
+var map__20973 = p__20972;
+var map__20973__$1 = (((((!((map__20973 == null))))?(((((map__20973.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__20973.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__20973):map__20973);
+var state = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20973__$1,cljs.core.cst$kw$state);
+var synth = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20973__$1,cljs.core.cst$kw$synth);
+var recognizer = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20973__$1,cljs.core.cst$kw$recognizer);
+var recog_handler = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__20973__$1,cljs.core.cst$kw$recog_DASH_handler);
 return reagent.dom.render.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [vocloj.dev.application,state,synth,recognizer,recog_handler], null),document.getElementById("application"));
 }));
 if((typeof vocloj !== 'undefined') && (typeof vocloj.dev !== 'undefined') && (typeof vocloj.dev.system !== 'undefined')){

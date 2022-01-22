@@ -8,7 +8,7 @@ goog.require('cljs.core.constants');
  */
 vocloj.protocols.Initializes = function(){};
 
-var vocloj$protocols$Initializes$_init$dyn_10373 = (function (_){
+var vocloj$protocols$Initializes$_init$dyn_13067 = (function (_){
 var x__4428__auto__ = (((_ == null))?null:_);
 var m__4429__auto__ = (vocloj.protocols._init[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -29,7 +29,7 @@ vocloj.protocols._init = (function vocloj$protocols$_init(_){
 if((((!((_ == null)))) && ((!((_.vocloj$protocols$Initializes$_init$arity$1 == null)))))){
 return _.vocloj$protocols$Initializes$_init$arity$1(_);
 } else {
-return vocloj$protocols$Initializes$_init$dyn_10373(_);
+return vocloj$protocols$Initializes$_init$dyn_13067(_);
 }
 });
 
@@ -39,7 +39,7 @@ return vocloj$protocols$Initializes$_init$dyn_10373(_);
  */
 vocloj.protocols.RecognizesSpeech = function(){};
 
-var vocloj$protocols$RecognizesSpeech$_start$dyn_10374 = (function (_){
+var vocloj$protocols$RecognizesSpeech$_start$dyn_13068 = (function (_){
 var x__4428__auto__ = (((_ == null))?null:_);
 var m__4429__auto__ = (vocloj.protocols._start[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -60,11 +60,11 @@ vocloj.protocols._start = (function vocloj$protocols$_start(_){
 if((((!((_ == null)))) && ((!((_.vocloj$protocols$RecognizesSpeech$_start$arity$1 == null)))))){
 return _.vocloj$protocols$RecognizesSpeech$_start$arity$1(_);
 } else {
-return vocloj$protocols$RecognizesSpeech$_start$dyn_10374(_);
+return vocloj$protocols$RecognizesSpeech$_start$dyn_13068(_);
 }
 });
 
-var vocloj$protocols$RecognizesSpeech$_stop$dyn_10375 = (function (_){
+var vocloj$protocols$RecognizesSpeech$_stop$dyn_13069 = (function (_){
 var x__4428__auto__ = (((_ == null))?null:_);
 var m__4429__auto__ = (vocloj.protocols._stop[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -85,7 +85,7 @@ vocloj.protocols._stop = (function vocloj$protocols$_stop(_){
 if((((!((_ == null)))) && ((!((_.vocloj$protocols$RecognizesSpeech$_stop$arity$1 == null)))))){
 return _.vocloj$protocols$RecognizesSpeech$_stop$arity$1(_);
 } else {
-return vocloj$protocols$RecognizesSpeech$_stop$dyn_10375(_);
+return vocloj$protocols$RecognizesSpeech$_stop$dyn_13069(_);
 }
 });
 
@@ -95,7 +95,7 @@ return vocloj$protocols$RecognizesSpeech$_stop$dyn_10375(_);
  */
 vocloj.protocols.SynthesizesSpeech = function(){};
 
-var vocloj$protocols$SynthesizesSpeech$_cancel$dyn_10376 = (function (_){
+var vocloj$protocols$SynthesizesSpeech$_cancel$dyn_13070 = (function (_){
 var x__4428__auto__ = (((_ == null))?null:_);
 var m__4429__auto__ = (vocloj.protocols._cancel[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -116,11 +116,11 @@ vocloj.protocols._cancel = (function vocloj$protocols$_cancel(_){
 if((((!((_ == null)))) && ((!((_.vocloj$protocols$SynthesizesSpeech$_cancel$arity$1 == null)))))){
 return _.vocloj$protocols$SynthesizesSpeech$_cancel$arity$1(_);
 } else {
-return vocloj$protocols$SynthesizesSpeech$_cancel$dyn_10376(_);
+return vocloj$protocols$SynthesizesSpeech$_cancel$dyn_13070(_);
 }
 });
 
-var vocloj$protocols$SynthesizesSpeech$_pause$dyn_10377 = (function (_){
+var vocloj$protocols$SynthesizesSpeech$_pause$dyn_13071 = (function (_){
 var x__4428__auto__ = (((_ == null))?null:_);
 var m__4429__auto__ = (vocloj.protocols._pause[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -141,11 +141,11 @@ vocloj.protocols._pause = (function vocloj$protocols$_pause(_){
 if((((!((_ == null)))) && ((!((_.vocloj$protocols$SynthesizesSpeech$_pause$arity$1 == null)))))){
 return _.vocloj$protocols$SynthesizesSpeech$_pause$arity$1(_);
 } else {
-return vocloj$protocols$SynthesizesSpeech$_pause$dyn_10377(_);
+return vocloj$protocols$SynthesizesSpeech$_pause$dyn_13071(_);
 }
 });
 
-var vocloj$protocols$SynthesizesSpeech$_resume$dyn_10378 = (function (_){
+var vocloj$protocols$SynthesizesSpeech$_resume$dyn_13072 = (function (_){
 var x__4428__auto__ = (((_ == null))?null:_);
 var m__4429__auto__ = (vocloj.protocols._resume[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -166,11 +166,11 @@ vocloj.protocols._resume = (function vocloj$protocols$_resume(_){
 if((((!((_ == null)))) && ((!((_.vocloj$protocols$SynthesizesSpeech$_resume$arity$1 == null)))))){
 return _.vocloj$protocols$SynthesizesSpeech$_resume$arity$1(_);
 } else {
-return vocloj$protocols$SynthesizesSpeech$_resume$dyn_10378(_);
+return vocloj$protocols$SynthesizesSpeech$_resume$dyn_13072(_);
 }
 });
 
-var vocloj$protocols$SynthesizesSpeech$_speak$dyn_10379 = (function (_,voice_id,utterance){
+var vocloj$protocols$SynthesizesSpeech$_speak$dyn_13073 = (function (_,voice_id,utterance){
 var x__4428__auto__ = (((_ == null))?null:_);
 var m__4429__auto__ = (vocloj.protocols._speak[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -191,7 +191,7 @@ vocloj.protocols._speak = (function vocloj$protocols$_speak(_,voice_id,utterance
 if((((!((_ == null)))) && ((!((_.vocloj$protocols$SynthesizesSpeech$_speak$arity$3 == null)))))){
 return _.vocloj$protocols$SynthesizesSpeech$_speak$arity$3(_,voice_id,utterance);
 } else {
-return vocloj$protocols$SynthesizesSpeech$_speak$dyn_10379(_,voice_id,utterance);
+return vocloj$protocols$SynthesizesSpeech$_speak$dyn_13073(_,voice_id,utterance);
 }
 });
 
@@ -201,7 +201,7 @@ return vocloj$protocols$SynthesizesSpeech$_speak$dyn_10379(_,voice_id,utterance)
  */
 vocloj.protocols.StateMachine = function(){};
 
-var vocloj$protocols$StateMachine$_add_effect$dyn_10380 = (function (_,key,fn_3){
+var vocloj$protocols$StateMachine$_add_effect$dyn_13074 = (function (_,key,fn_3){
 var x__4428__auto__ = (((_ == null))?null:_);
 var m__4429__auto__ = (vocloj.protocols._add_effect[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -222,11 +222,11 @@ vocloj.protocols._add_effect = (function vocloj$protocols$_add_effect(_,key,fn_3
 if((((!((_ == null)))) && ((!((_.vocloj$protocols$StateMachine$_add_effect$arity$3 == null)))))){
 return _.vocloj$protocols$StateMachine$_add_effect$arity$3(_,key,fn_3);
 } else {
-return vocloj$protocols$StateMachine$_add_effect$dyn_10380(_,key,fn_3);
+return vocloj$protocols$StateMachine$_add_effect$dyn_13074(_,key,fn_3);
 }
 });
 
-var vocloj$protocols$StateMachine$_transition$dyn_10381 = (function (_,event,payload){
+var vocloj$protocols$StateMachine$_transition$dyn_13075 = (function (_,event,payload){
 var x__4428__auto__ = (((_ == null))?null:_);
 var m__4429__auto__ = (vocloj.protocols._transition[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -247,11 +247,11 @@ vocloj.protocols._transition = (function vocloj$protocols$_transition(_,event,pa
 if((((!((_ == null)))) && ((!((_.vocloj$protocols$StateMachine$_transition$arity$3 == null)))))){
 return _.vocloj$protocols$StateMachine$_transition$arity$3(_,event,payload);
 } else {
-return vocloj$protocols$StateMachine$_transition$dyn_10381(_,event,payload);
+return vocloj$protocols$StateMachine$_transition$dyn_13075(_,event,payload);
 }
 });
 
-var vocloj$protocols$StateMachine$_current_state$dyn_10382 = (function (_){
+var vocloj$protocols$StateMachine$_current_state$dyn_13076 = (function (_){
 var x__4428__auto__ = (((_ == null))?null:_);
 var m__4429__auto__ = (vocloj.protocols._current_state[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -272,7 +272,7 @@ vocloj.protocols._current_state = (function vocloj$protocols$_current_state(_){
 if((((!((_ == null)))) && ((!((_.vocloj$protocols$StateMachine$_current_state$arity$1 == null)))))){
 return _.vocloj$protocols$StateMachine$_current_state$arity$1(_);
 } else {
-return vocloj$protocols$StateMachine$_current_state$dyn_10382(_);
+return vocloj$protocols$StateMachine$_current_state$dyn_13076(_);
 }
 });
 

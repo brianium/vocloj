@@ -32,8 +32,8 @@ goog.require('vocloj.web.impl');
  * ```
  */
 vocloj.web.create_recognizer = (function vocloj$web$create_recognizer(var_args){
-var G__20616 = arguments.length;
-switch (G__20616) {
+var G__19401 = arguments.length;
+switch (G__19401) {
 case 0:
 return vocloj.web.create_recognizer.cljs$core$IFn$_invoke$arity$0();
 
@@ -97,8 +97,8 @@ return vocloj.web.impl.create_recognizer.cljs$core$IFn$_invoke$arity$2(options,a
  *   :volume - float?
  */
 vocloj.web.create_synthesizer = (function vocloj$web$create_synthesizer(var_args){
-var G__20619 = arguments.length;
-switch (G__20619) {
+var G__19404 = arguments.length;
+switch (G__19404) {
 case 0:
 return vocloj.web.create_synthesizer.cljs$core$IFn$_invoke$arity$0();
 

@@ -35,8 +35,8 @@ goog.require('vocloj.state.impl');
  * Clojure's own atoms.
  */
 vocloj.state.create_atom_state_machine = (function vocloj$state$create_atom_state_machine(var_args){
-var G__20376 = arguments.length;
-switch (G__20376) {
+var G__19238 = arguments.length;
+switch (G__19238) {
 case 2:
 return vocloj.state.create_atom_state_machine.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -78,8 +78,8 @@ return vocloj.state.impl.__GT_AtomStateMachine(states,(atom_fn.cljs$core$IFn$_in
  * recognizer will do nothing until it is initialized then started.
  */
 vocloj.state.create_recognizer_state_machine = (function vocloj$state$create_recognizer_state_machine(var_args){
-var G__20379 = arguments.length;
-switch (G__20379) {
+var G__19241 = arguments.length;
+switch (G__19241) {
 case 1:
 return vocloj.state.create_recognizer_state_machine.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -124,8 +124,8 @@ return vocloj.state.create_recognizer_state_machine.cljs$core$IFn$_invoke$arity$
  * synthesizer will do nothing until it is initialized.
  */
 vocloj.state.create_synthesis_state_machine = (function vocloj$state$create_synthesis_state_machine(var_args){
-var G__20382 = arguments.length;
-switch (G__20382) {
+var G__19244 = arguments.length;
+switch (G__19244) {
 case 1:
 return vocloj.state.create_synthesis_state_machine.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
