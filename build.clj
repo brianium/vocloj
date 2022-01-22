@@ -28,3 +28,7 @@
                :target-dir class-dir})
   (b/jar {:class-dir class-dir
           :jar-file jar-file}))
+
+(defn copy-public [_]
+  (b/copy-dir {:src-dirs   ["resources/public"]
+               :target-dir "target/public"}))

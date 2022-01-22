@@ -1,16 +1,19 @@
 {:paths ["src/cljs" "src/cljc" "target" "resources"]
  :deps {org.clojure/core.async {:mvn/version "1.5.648"}}
  :aliases
- {:build {:deps {io.github.clojure/tools.build {:git/tag "v0.7.2" :git/sha "0361dde"}}
-          :ns-default build}
-  :deploy {:extra-deps {slipset/deps-deploy {:mvn/version "0.2.0"}}
-           :exec-fn    deps-deploy.deps-deploy/deploy
-           :exec-args  {:installer :remote
-                        :artifact "target/vocloj.jar"
-                        :pom-file "target/classes/META-INF/maven/com.github.brianium/vocloj/pom.xml"}}
-  :dev {:extra-deps  {cljsjs/react              {:mvn/version "17.0.2-0"}
-                      cljsjs/react-dom          {:mvn/version "17.0.2-0"}
-                      com.bhauman/figwheel-main {:mvn/version "0.2.15"}
-                      integrant/integrant       {:mvn/version "0.8.0"}
-                      reagent/reagent           {:mvn/version "1.1.0"}}
-        :extra-paths ["dev/cljs"]}}}
+ {:build   {:deps       {io.github.clojure/tools.build {:git/tag "v0.7.2"
+                                                        :git/sha "0361dde"}}
+            :ns-default build}
+  :deploy  {:extra-deps {slipset/deps-deploy {:mvn/version "0.2.0"}}
+            :exec-fn    deps-deploy.deps-deploy/deploy
+            :exec-args  {:installer :remote
+                         :artifact  "target/vocloj.jar"
+                         :pom-file  "target/classes/META-INF/maven/com.github.brianium/vocloj/pom.xml"}}
+  :web/dev {:extra-deps  {cljsjs/react              {:mvn/version "17.0.2-0"}
+                          cljsjs/react-dom          {:mvn/version "17.0.2-0"}
+                          com.bhauman/figwheel-main {:mvn/version "0.2.15"}
+                          integrant/integrant       {:mvn/version "0.8.0"}
+                          reagent/reagent           {:mvn/version "1.1.0"}}
+            :extra-paths ["dev/cljs"]}
+  
+  :web/demo {:main-opts ["-m" "figwheel.main" "-O" "advanced" "-bo" "dev"]}}}
