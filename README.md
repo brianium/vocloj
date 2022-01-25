@@ -49,7 +49,7 @@ Clojure(Script) is great. Speech synthesis and recognition are fun and probably 
 
 Currently the only supported implementation. Synthesis is backed by the [SpeechSynthesis](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis) API, and recognition is backed by the [SpeechRecognition](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition) API.
 
-The caveat to using the vocloj's web interface is that most browsers require user interaction to initialize synthesis and recognition.
+The caveat to using vocloj's web interface is that most browsers require user interaction to initialize synthesis and recognition.
 
 See the demo app for an example.
 
