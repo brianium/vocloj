@@ -2,7 +2,7 @@
   (:require [clojure.string :as string]
             [cljs.core.async :as async]
             [vocloj.core :as core]
-            [vocloj.protocols :refer [StateMachine RecognizesSpeech Initializes SynthesizesSpeech]]
+            [vocloj.protocols :refer [StateMachine Lifecycle Suspendable Initializable SynthesizesSpeech]]
             [vocloj.state :as state]))
 
 (defn current-data
@@ -59,7 +59,7 @@
    [_]
    (core/current-state state-machine))
   
-  Initializes
+  Initializable
   (-init
    [this]
    (let [recognition    (create-recognition options)
@@ -69,7 +69,7 @@
                                   :speech-ch            speech-ch
                                   :listener/result      on-result})))
 
-  RecognizesSpeech
+  Lifecycle
   (-start
    [this]
    (let [stop-ch (async/chan)]
@@ -136,7 +136,7 @@
     [_]
     (core/current-state state-machine))
 
-  Initializes
+  Initializable
   (-init
     [this]
     (let [controller        (js/AbortController.)
@@ -148,17 +148,18 @@
                                    :voice-change-controller controller})
       (when (in "onvoiceschanged" js/speechSynthesis)
         (.addEventListener js/speechSynthesis "voiceschanged" on-voices-changed #js {:signal signal}))))
+  
+  Suspendable
+  (-pause
+    [this]
+    (core/transition this :pause current-data))
+
+  (-resume
+    [this]
+    (core/transition this :resume current-data))
 
   SynthesizesSpeech
   (-cancel [_] (.cancel js/speechSynthesis))
-
-  (-pause
-   [this]
-   (core/transition this :pause current-data))
-
-  (-resume
-   [this]
-   (core/transition this :resume current-data))
 
   (-speak
     [this voice-id {:keys [text lang pitch rate volume]}]

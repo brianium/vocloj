@@ -1,19 +1,21 @@
 (ns vocloj.protocols
   "Contains vocloj protocols. Speech recognizers and speech synthesizers
    may adhere to the vocloj.core api by implementing their respective
-   protcols as well as the Initializes and StateMachine protocols.")
+   protcols as well as the Initializable and StateMachine protocols.")
 
-(defprotocol Initializes
+(defprotocol Initializable
   (-init  [_] "Initialize a type. Useful for setting up event streams and necessary resources"))
 
-(defprotocol RecognizesSpeech
-  (-start [_] "Start speech recognition. Returns a channel that receives results")
-  (-stop  [_] "Stop attempting to recognize speech"))
+(defprotocol Lifecycle
+  (-start [_] "Start a component")
+  (-stop  [_] "Stop a component"))
+
+(defprotocol Suspendable
+  (-pause [_] "Pause a component")
+  (-resume [_] "Resume a component"))
 
 (defprotocol SynthesizesSpeech
   (-cancel [_] "Cancel all speech, including any enqueued for further utterance")
-  (-pause [_] "Pause the currently spoken utterance")
-  (-resume [_] "Resume a paused utterance")
   (-speak [_ voice-id utterance] "Speak an utterance using the given voice id"))
 
 (defprotocol StateMachine
