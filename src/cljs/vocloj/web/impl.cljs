@@ -2,7 +2,7 @@
   (:require [clojure.string :as string]
             [cljs.core.async :as async]
             [vocloj.core :as core]
-            [vocloj.protocols :refer [StateMachine Lifecycle Suspendable Initializable SynthesizesSpeech]]
+            [vocloj.protocols :refer [StateMachine Lifecycle Suspendable Initializable SynthesizesSpeech ReceivesSpeech]]
             [vocloj.state :as state]))
 
 (defn current-data
@@ -79,7 +79,25 @@
 
   (-stop
    [this]
-   (core/transition this :stop)))
+   (core/transition this :stop))
+  
+  ReceivesSpeech
+  (-get-speech-channel
+   [this]
+   (-> (core/current-state this)
+       (:data)
+       (:speech-ch)))
+  
+  (-get-stop-channel
+   [this]
+   (-> (core/current-state this)
+       (:data)
+       (:stop-ch)))
+  
+  (-listen
+   [this]
+   (core/start
+    (core/init this))))
 
 (defn on-ready
   "When the speech recognizer switches to a ready state, add necessary

@@ -30,15 +30,19 @@
   [sm]
   (p/-current-state sm))
 
-;;; Initialization API
+(defn get-speech-channel
+  [speech-receiver]
+  (p/-get-speech-channel speech-receiver))
+
+(defn get-stop-channel
+  [speech-receiver]
+  (p/-get-stop-channel speech-receiver))
 
 (defn init
   "Initialize the given speech recognizer"
   [initializable]
   (p/-init initializable)
   initializable)
-
-;;; Speech recognition API
 
 (defn start
   "Start the given speech recognizer"
@@ -53,31 +57,26 @@
   recognizer)
 
 (defn listen
-  "A shortcut for calling init then start on the given speech recognizer.
+  "Causes the given speech receiver to start listening for speech input.
    
-   When called with one argument, the recognizer is initialized then started
+   When called with one argument, the receiver is initialized then started
    and the underlying result channel is returned.
    
    When called with two arguments, speech results will be passed to the given function
    as they are made available."
-  ([recognizer]
-   (-> recognizer
-       init
-       start
-       current-state
-       :data
-       :speech-ch))
-  ([recognizer handler]
-   (let [ch      (listen recognizer)
-         stop-ch (-> recognizer current-state :data :stop-ch)]
+  ([speech-receiver]
+   (-> speech-receiver
+       (p/-listen)
+       (get-speech-channel)))
+  ([speech-receiver handler]
+   (let [ch      (listen speech-receiver)
+         stop-ch (get-stop-channel speech-receiver)]
      (async/go-loop []
        (let [[v p] (async/alts! [ch stop-ch])]
          (when (= p ch)
            (handler v)
            (recur))))
-     recognizer)))
-
-;;; Speech synthesis API
+     speech-receiver)))
 
 (defn cancel
   "Cancel the given speech synthesizer"

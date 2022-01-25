@@ -23,5 +23,7 @@
   (-transition [_ event payload] "Transition the state machine to a new state")
   (-current-state [_] "Return the current state of the state machine"))
 
-
-
+(defprotocol ReceivesSpeech
+  (-get-speech-channel [_] "Returns a channel that receives speech data")
+  (-listen [_] "Start listening for speech")
+  (-get-stop-channel [_] "Return a channel that receives stop signals"))
