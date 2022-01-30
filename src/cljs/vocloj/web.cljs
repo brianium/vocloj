@@ -29,6 +29,13 @@
    
    ```clojure
    (create-recognizer {:continuous? true} r/atom)
+   ```
+   
+   The speech results put on channel will always be lists of hash-maps containing
+   minimally :transcript and :confidence keys:
+   
+   ```clojure
+   ({:transcript \"Hello from my microphone!\" :confidence 0.999}) 
    ```"
   ([]
    (impl/create-recognizer))
@@ -81,7 +88,22 @@
   (impl/remove-listeners synth))
 
 (defn create-microphone-stream
-  "Create a microphone stream that supports reading data from the user's microphone in browser."
+  "Create a microphone stream backed by native browser apis.
+   
+   When called with no arguments, a default microphone stream will be returned.
+
+   ```clojure
+   (create-microphone-stream)
+   ```
+   
+   When called with two arguments, an atom-fn can be given. This may be useful
+   for using an alternative atom function like reagent's \"ratoms\".
+   
+   ```clojure
+   (create-microphone-stream r/atom)
+   ```
+   
+   The speech results put on channel will individually be a js array, or chunk, of browser native Blob objects."
   ([]
    (impl/create-microphone-stream))
   ([atom-fn]

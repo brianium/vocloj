@@ -95,6 +95,36 @@
    (create-synthesis-state-machine atom)))
 
 (defn create-microphone-stream-state-machine
+  "This is merely a suggestion for microphone state machines.
+   
+   The atom-fn functions per create-atom-state-machine.
+   
+   The underlying state machine supports the following states:
+   
+   ```clojure
+   {:dormant    {:error :error
+                 :init  :ready}
+     :error     {:error :error
+                 :init  :ready}
+     :stopped   {:error :error
+                 :init  :ready}
+     :ready     {:start :recording}
+     :recording {:end   :dormant
+                 :error :error
+                 :mute  :muted
+                 :pause :paused
+                 :stop  :stopped}
+     :muted     {:end    :dormant
+                 :stop   :stopped
+                 :unmute :recording}
+     :paused    {:end    :dormant
+                 :mute   :muted
+                 :resume :record
+                 :stop   :stopped}}
+   ```
+   
+   The initial state reflects a dormant microphone with nil data in state. A dormant
+   synthesizer will do nothing until it is initialized."
   ([atom-fn]
    (create-atom-state-machine
     {:dormant   {:error :error

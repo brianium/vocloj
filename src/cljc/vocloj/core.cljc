@@ -99,40 +99,40 @@
   (impl/init initializable))
 
 (defn start
-  "Actually begin listening for speech on the given recognizer.
+  "Starts the lifecycle of a component that implements the Lifecycle protocol.
    
    Returns the value given."
-  [recognizer]
-  (impl/start recognizer))
+  [component]
+  (impl/start component))
 
 (defn stop
-  "Makes the given recognizer stop listening for speech.
+  "Stops the lifecycle of a component that implements the Lifecycle protocol.
    
    Returns the value given."
-  [recognizer]
-  (impl/stop recognizer))
+  [component]
+  (impl/stop component))
 
 (defn listen
-  "Probably the preferred means for using a speech recognizer.
+  "Probably the preferred means for using a speech receiver
   
    This function serves as a shortcut for initializing then starting the
-   given recognizer.
+   given receiver
    
    When called with one argument, listen returns a core.async channel that will receive
-   transcript results.
+   speech results.
    
    The following snippet shows the implementation of listen's two argument
-   alternative. Different stop logic can be used that calls (stop recognizer) explicitly.
+   alternative. Different stop logic can be used that calls (stop receiver) explicitly.
 
    ```clojure
-   (let [ch      (listen recognizer)
-         stop-ch (-> recognizer current-state :data :stop-ch)]
+   (let [ch      (listen speech-receiver)
+         stop-ch (get-stop-channel speech-receiver))]
      (async/go-loop []
        (let [[v p] (async/alts! [ch stop-ch])]
          (when (= p ch)
            (handler v)
            (recur))))
-     recognizer)
+     speech-receiver)
    ```
    
    When called with two arguments, the second argument must be an fn
@@ -142,16 +142,11 @@
    (listen recognizer (fn [result] (do-something-with-result result)))
    ```
    
-   The results put on the channel will always be lists of hash-maps containing
-   minimally :transcript and :confidence keys:
-   
-   ```clojure
-   ({:transcript \"Hello from my microphone!\" :confidence 0.999}) 
-   ```"
-  ([recognizer]
-   (impl/listen recognizer))
-  ([recognizer handler]
-   (impl/listen recognizer handler)))
+   The results put on the channel will vary by implementation."
+  ([speech-receiver]
+   (impl/listen speech-receiver))
+  ([speech-receiver handler]
+   (impl/listen speech-receiver handler)))
 
 (defn cancel
   "Cancel speech synthesis occurring on the given synthesizer. This

@@ -46,31 +46,21 @@
   (p/-get-stop-channel speech-receiver))
 
 (defn init
-  "Initialize the given speech recognizer"
   [initializable]
   (p/-init initializable)
   initializable)
 
 (defn start
-  "Start the given speech recognizer"
-  [recognizer]
-  (p/-start recognizer)
-  recognizer)
+  [component]
+  (p/-start component)
+  component)
 
 (defn stop
-  "Stop the given speech recognizer"
-  [recognizer]
-  (p/-stop recognizer)
-  recognizer)
+  [component]
+  (p/-stop component)
+  component)
 
 (defn listen
-  "Causes the given speech receiver to start listening for speech input.
-   
-   When called with one argument, the receiver is initialized then started
-   and the underlying result channel is returned.
-   
-   When called with two arguments, speech results will be passed to the given function
-   as they are made available."
   ([speech-receiver]
    (-> speech-receiver
        (p/-listen)

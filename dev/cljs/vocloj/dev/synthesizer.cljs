@@ -18,6 +18,19 @@
      (for [voice voices]
        ^{:key (.-voiceURI voice)} [voice-option voice])]))
 
+(defn make-default-voice-handler
+  "Ensure the synthesizer has a default voice set"
+  [*state]
+  (fn [_ _ new-state]
+    (when-let [voices (get-in new-state [:data :voices])]
+      (when-not (some? (:synth/voice-id @*state))
+        (let [get-key (fnil key (key (first voices)))
+              default (->> voices
+                           (filter #(= "en-US" (-> % val .-lang)))
+                           (first)
+                           (get-key))]
+          (swap! *state #(assoc % :synth/voice-id default)))))))
+
 (defn synthesizer [*state synth]
   (let [{:synth/keys [voice-id text pitch rate volume]} @*state
         state (vocloj/current-state synth)]
@@ -43,7 +56,8 @@
          :speaking "pause"
          :paused   "resume"
          "speak")]
-      [voices {:on-change #(swap! *state assoc :synth/voice-id (.. % -target -value))}
+      [voices {:on-change #(swap! *state assoc :synth/voice-id (.. % -target -value))
+               :value     (or voice-id "")}
        (-> state :data :voices)]
       [co/range-input {:disabled  (not= :ready (:state state))
                        :on-change #(swap! *state assoc :synth/pitch (.. % -target -value))

@@ -215,11 +215,6 @@
   (.resume js/speechSynthesis))
 
 (defn on-speak
-  "Actually responsible for initiating speech. Utterances are stored
-   in a stateful queue solely to prevent garbage collection in browsers like Safari.
-   The utterance 'end' event is used to transition the synthesizer back to a ready state. If the
-   utterance is garbage collected before the end event is fired, the synthesizer will never
-   return to a ready state"
   [synth _ {{:keys [utterances]} :data}]
   (let [utterance (peek utterances)]
     (.addEventListener utterance "end" #(core/transition synth :end (-> synth
@@ -239,10 +234,6 @@
        (core/init))))
 
 (defn remove-listeners
-  "This is relevant only to web synthesizers. There is a single
-   speechSynthesis object available to bind to for voice change events. Multiple
-   bindings are fairly benign, but this provides a means to cleanly unbind voicechange
-   events from the global object"
   [web-synth]
   (let [data       (current-data web-synth)
         controller (:voice-change-controller data)]

@@ -5,7 +5,7 @@
             [vocloj.core :as volcloj.core]
             [vocloj.dev.microphone :as mic :refer [microphone]]
             [vocloj.dev.recognizer :as recog :refer [recognizer]]
-            [vocloj.dev.synthesizer :refer [synthesizer]]
+            [vocloj.dev.synthesizer :as synth :refer [synthesizer]]
             [vocloj.web :as web]))
 
 ;;; Demo application
@@ -38,13 +38,13 @@
   {::state          {:nav/screen       :synth
                      :mic/chunks       []
                      :mic/recordings   []
-                     :synth/voice-id   "Alex"
+                     :synth/voice-id   nil
                      :synth/text       ""
                      :synth/pitch      1.0
                      :synth/rate       1.0
                      :synth/volume     1.0
                      :recog/transcript nil}
-   ::synthesizer    {}
+   ::synthesizer    {:state (ig/ref ::state)}
    ::recognizer     {:options {:continuous? true}}
    ::recog-handler  {:state  (ig/ref ::state)}
    ::microphone     {:state (ig/ref ::state)}
@@ -77,8 +77,9 @@
 (defmethod ig/resume-key ::state [_ _ _ prev]
   prev)
 
-(defmethod ig/init-key ::synthesizer [_ _]
-  (web/create-synthesizer r/atom))
+(defmethod ig/init-key ::synthesizer [_ {:keys [state]}]
+  (-> (web/create-synthesizer r/atom)
+      (vocloj.core/add-effect ::voices (synth/make-default-voice-handler state))))
 
 (defmethod ig/halt-key! ::synthesizer [_ synth]
   (web/remove-listeners synth))
