@@ -30,10 +30,17 @@ goog.require('vocloj.web.impl');
  * ```clojure
  * (create-recognizer {:continuous? true} r/atom)
  * ```
+ * 
+ * The speech results put on channel will always be lists of hash-maps containing
+ * minimally :transcript and :confidence keys:
+ * 
+ * ```clojure
+ * ({:transcript "Hello from my microphone!" :confidence 0.999}) 
+ * ```
  */
 vocloj.web.create_recognizer = (function vocloj$web$create_recognizer(var_args){
-var G__19539 = arguments.length;
-switch (G__19539) {
+var G__19616 = arguments.length;
+switch (G__19616) {
 case 0:
 return vocloj.web.create_recognizer.cljs$core$IFn$_invoke$arity$0();
 
@@ -97,8 +104,8 @@ return vocloj.web.impl.create_recognizer.cljs$core$IFn$_invoke$arity$2(options,a
  *   :volume - float?
  */
 vocloj.web.create_synthesizer = (function vocloj$web$create_synthesizer(var_args){
-var G__19542 = arguments.length;
-switch (G__19542) {
+var G__19619 = arguments.length;
+switch (G__19619) {
 case 0:
 return vocloj.web.create_synthesizer.cljs$core$IFn$_invoke$arity$0();
 
@@ -134,11 +141,26 @@ vocloj.web.remove_listeners = (function vocloj$web$remove_listeners(synth){
 return vocloj.web.impl.remove_listeners(synth);
 });
 /**
- * Create a microphone stream that supports reading data from the user's microphone in browser.
+ * Create a microphone stream backed by native browser apis.
+ * 
+ * When called with no arguments, a default microphone stream will be returned.
+ * 
+ * ```clojure
+ * (create-microphone-stream)
+ * ```
+ * 
+ * When called with two arguments, an atom-fn can be given. This may be useful
+ * for using an alternative atom function like reagent's "ratoms".
+ * 
+ * ```clojure
+ * (create-microphone-stream r/atom)
+ * ```
+ * 
+ * The speech results put on channel will individually be a js array, or chunk, of browser native Blob objects.
  */
 vocloj.web.create_microphone_stream = (function vocloj$web$create_microphone_stream(var_args){
-var G__19545 = arguments.length;
-switch (G__19545) {
+var G__19622 = arguments.length;
+switch (G__19622) {
 case 0:
 return vocloj.web.create_microphone_stream.cljs$core$IFn$_invoke$arity$0();
 

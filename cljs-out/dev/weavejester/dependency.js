@@ -9,7 +9,7 @@ goog.require('clojure.set');
  */
 weavejester.dependency.DependencyGraph = function(){};
 
-var weavejester$dependency$DependencyGraph$immediate_dependencies$dyn_19632 = (function (graph,node){
+var weavejester$dependency$DependencyGraph$immediate_dependencies$dyn_19277 = (function (graph,node){
 var x__4428__auto__ = (((graph == null))?null:graph);
 var m__4429__auto__ = (weavejester.dependency.immediate_dependencies[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -30,11 +30,11 @@ weavejester.dependency.immediate_dependencies = (function weavejester$dependency
 if((((!((graph == null)))) && ((!((graph.weavejester$dependency$DependencyGraph$immediate_dependencies$arity$2 == null)))))){
 return graph.weavejester$dependency$DependencyGraph$immediate_dependencies$arity$2(graph,node);
 } else {
-return weavejester$dependency$DependencyGraph$immediate_dependencies$dyn_19632(graph,node);
+return weavejester$dependency$DependencyGraph$immediate_dependencies$dyn_19277(graph,node);
 }
 });
 
-var weavejester$dependency$DependencyGraph$immediate_dependents$dyn_19633 = (function (graph,node){
+var weavejester$dependency$DependencyGraph$immediate_dependents$dyn_19278 = (function (graph,node){
 var x__4428__auto__ = (((graph == null))?null:graph);
 var m__4429__auto__ = (weavejester.dependency.immediate_dependents[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -55,11 +55,11 @@ weavejester.dependency.immediate_dependents = (function weavejester$dependency$i
 if((((!((graph == null)))) && ((!((graph.weavejester$dependency$DependencyGraph$immediate_dependents$arity$2 == null)))))){
 return graph.weavejester$dependency$DependencyGraph$immediate_dependents$arity$2(graph,node);
 } else {
-return weavejester$dependency$DependencyGraph$immediate_dependents$dyn_19633(graph,node);
+return weavejester$dependency$DependencyGraph$immediate_dependents$dyn_19278(graph,node);
 }
 });
 
-var weavejester$dependency$DependencyGraph$transitive_dependencies$dyn_19634 = (function (graph,node){
+var weavejester$dependency$DependencyGraph$transitive_dependencies$dyn_19279 = (function (graph,node){
 var x__4428__auto__ = (((graph == null))?null:graph);
 var m__4429__auto__ = (weavejester.dependency.transitive_dependencies[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -81,11 +81,11 @@ weavejester.dependency.transitive_dependencies = (function weavejester$dependenc
 if((((!((graph == null)))) && ((!((graph.weavejester$dependency$DependencyGraph$transitive_dependencies$arity$2 == null)))))){
 return graph.weavejester$dependency$DependencyGraph$transitive_dependencies$arity$2(graph,node);
 } else {
-return weavejester$dependency$DependencyGraph$transitive_dependencies$dyn_19634(graph,node);
+return weavejester$dependency$DependencyGraph$transitive_dependencies$dyn_19279(graph,node);
 }
 });
 
-var weavejester$dependency$DependencyGraph$transitive_dependencies_set$dyn_19635 = (function (graph,node_set){
+var weavejester$dependency$DependencyGraph$transitive_dependencies_set$dyn_19280 = (function (graph,node_set){
 var x__4428__auto__ = (((graph == null))?null:graph);
 var m__4429__auto__ = (weavejester.dependency.transitive_dependencies_set[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -107,11 +107,11 @@ weavejester.dependency.transitive_dependencies_set = (function weavejester$depen
 if((((!((graph == null)))) && ((!((graph.weavejester$dependency$DependencyGraph$transitive_dependencies_set$arity$2 == null)))))){
 return graph.weavejester$dependency$DependencyGraph$transitive_dependencies_set$arity$2(graph,node_set);
 } else {
-return weavejester$dependency$DependencyGraph$transitive_dependencies_set$dyn_19635(graph,node_set);
+return weavejester$dependency$DependencyGraph$transitive_dependencies_set$dyn_19280(graph,node_set);
 }
 });
 
-var weavejester$dependency$DependencyGraph$transitive_dependents$dyn_19636 = (function (graph,node){
+var weavejester$dependency$DependencyGraph$transitive_dependents$dyn_19281 = (function (graph,node){
 var x__4428__auto__ = (((graph == null))?null:graph);
 var m__4429__auto__ = (weavejester.dependency.transitive_dependents[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -133,11 +133,11 @@ weavejester.dependency.transitive_dependents = (function weavejester$dependency$
 if((((!((graph == null)))) && ((!((graph.weavejester$dependency$DependencyGraph$transitive_dependents$arity$2 == null)))))){
 return graph.weavejester$dependency$DependencyGraph$transitive_dependents$arity$2(graph,node);
 } else {
-return weavejester$dependency$DependencyGraph$transitive_dependents$dyn_19636(graph,node);
+return weavejester$dependency$DependencyGraph$transitive_dependents$dyn_19281(graph,node);
 }
 });
 
-var weavejester$dependency$DependencyGraph$transitive_dependents_set$dyn_19637 = (function (graph,node_set){
+var weavejester$dependency$DependencyGraph$transitive_dependents_set$dyn_19282 = (function (graph,node_set){
 var x__4428__auto__ = (((graph == null))?null:graph);
 var m__4429__auto__ = (weavejester.dependency.transitive_dependents_set[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -159,11 +159,11 @@ weavejester.dependency.transitive_dependents_set = (function weavejester$depende
 if((((!((graph == null)))) && ((!((graph.weavejester$dependency$DependencyGraph$transitive_dependents_set$arity$2 == null)))))){
 return graph.weavejester$dependency$DependencyGraph$transitive_dependents_set$arity$2(graph,node_set);
 } else {
-return weavejester$dependency$DependencyGraph$transitive_dependents_set$dyn_19637(graph,node_set);
+return weavejester$dependency$DependencyGraph$transitive_dependents_set$dyn_19282(graph,node_set);
 }
 });
 
-var weavejester$dependency$DependencyGraph$nodes$dyn_19638 = (function (graph){
+var weavejester$dependency$DependencyGraph$nodes$dyn_19283 = (function (graph){
 var x__4428__auto__ = (((graph == null))?null:graph);
 var m__4429__auto__ = (weavejester.dependency.nodes[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -184,7 +184,7 @@ weavejester.dependency.nodes = (function weavejester$dependency$nodes(graph){
 if((((!((graph == null)))) && ((!((graph.weavejester$dependency$DependencyGraph$nodes$arity$1 == null)))))){
 return graph.weavejester$dependency$DependencyGraph$nodes$arity$1(graph);
 } else {
-return weavejester$dependency$DependencyGraph$nodes$dyn_19638(graph);
+return weavejester$dependency$DependencyGraph$nodes$dyn_19283(graph);
 }
 });
 
@@ -194,7 +194,7 @@ return weavejester$dependency$DependencyGraph$nodes$dyn_19638(graph);
  */
 weavejester.dependency.DependencyGraphUpdate = function(){};
 
-var weavejester$dependency$DependencyGraphUpdate$depend$dyn_19639 = (function (graph,node,dep){
+var weavejester$dependency$DependencyGraphUpdate$depend$dyn_19284 = (function (graph,node,dep){
 var x__4428__auto__ = (((graph == null))?null:graph);
 var m__4429__auto__ = (weavejester.dependency.depend[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -216,11 +216,11 @@ weavejester.dependency.depend = (function weavejester$dependency$depend(graph,no
 if((((!((graph == null)))) && ((!((graph.weavejester$dependency$DependencyGraphUpdate$depend$arity$3 == null)))))){
 return graph.weavejester$dependency$DependencyGraphUpdate$depend$arity$3(graph,node,dep);
 } else {
-return weavejester$dependency$DependencyGraphUpdate$depend$dyn_19639(graph,node,dep);
+return weavejester$dependency$DependencyGraphUpdate$depend$dyn_19284(graph,node,dep);
 }
 });
 
-var weavejester$dependency$DependencyGraphUpdate$remove_edge$dyn_19640 = (function (graph,node,dep){
+var weavejester$dependency$DependencyGraphUpdate$remove_edge$dyn_19285 = (function (graph,node,dep){
 var x__4428__auto__ = (((graph == null))?null:graph);
 var m__4429__auto__ = (weavejester.dependency.remove_edge[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -241,11 +241,11 @@ weavejester.dependency.remove_edge = (function weavejester$dependency$remove_edg
 if((((!((graph == null)))) && ((!((graph.weavejester$dependency$DependencyGraphUpdate$remove_edge$arity$3 == null)))))){
 return graph.weavejester$dependency$DependencyGraphUpdate$remove_edge$arity$3(graph,node,dep);
 } else {
-return weavejester$dependency$DependencyGraphUpdate$remove_edge$dyn_19640(graph,node,dep);
+return weavejester$dependency$DependencyGraphUpdate$remove_edge$dyn_19285(graph,node,dep);
 }
 });
 
-var weavejester$dependency$DependencyGraphUpdate$remove_all$dyn_19641 = (function (graph,node){
+var weavejester$dependency$DependencyGraphUpdate$remove_all$dyn_19286 = (function (graph,node){
 var x__4428__auto__ = (((graph == null))?null:graph);
 var m__4429__auto__ = (weavejester.dependency.remove_all[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -266,11 +266,11 @@ weavejester.dependency.remove_all = (function weavejester$dependency$remove_all(
 if((((!((graph == null)))) && ((!((graph.weavejester$dependency$DependencyGraphUpdate$remove_all$arity$2 == null)))))){
 return graph.weavejester$dependency$DependencyGraphUpdate$remove_all$arity$2(graph,node);
 } else {
-return weavejester$dependency$DependencyGraphUpdate$remove_all$dyn_19641(graph,node);
+return weavejester$dependency$DependencyGraphUpdate$remove_all$dyn_19286(graph,node);
 }
 });
 
-var weavejester$dependency$DependencyGraphUpdate$remove_node$dyn_19642 = (function (graph,node){
+var weavejester$dependency$DependencyGraphUpdate$remove_node$dyn_19287 = (function (graph,node){
 var x__4428__auto__ = (((graph == null))?null:graph);
 var m__4429__auto__ = (weavejester.dependency.remove_node[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -293,15 +293,15 @@ weavejester.dependency.remove_node = (function weavejester$dependency$remove_nod
 if((((!((graph == null)))) && ((!((graph.weavejester$dependency$DependencyGraphUpdate$remove_node$arity$2 == null)))))){
 return graph.weavejester$dependency$DependencyGraphUpdate$remove_node$arity$2(graph,node);
 } else {
-return weavejester$dependency$DependencyGraphUpdate$remove_node$dyn_19642(graph,node);
+return weavejester$dependency$DependencyGraphUpdate$remove_node$dyn_19287(graph,node);
 }
 });
 
 weavejester.dependency.remove_from_map = (function weavejester$dependency$remove_from_map(amap,x){
-return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (m,p__19643){
-var vec__19644 = p__19643;
-var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__19644,(0),null);
-var vs = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__19644,(1),null);
+return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (m,p__19288){
+var vec__19289 = p__19288;
+var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__19289,(0),null);
+var vs = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__19289,(1),null);
 return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(m,k,cljs.core.disj.cljs$core$IFn$_invoke$arity$2(vs,x));
 }),cljs.core.PersistentArrayMap.EMPTY,cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(amap,x));
 });
@@ -315,23 +315,23 @@ var expanded = cljs.core.PersistentHashSet.EMPTY;
 while(true){
 var temp__5751__auto__ = cljs.core.seq(unexpanded);
 if(temp__5751__auto__){
-var vec__19650 = temp__5751__auto__;
-var seq__19651 = cljs.core.seq(vec__19650);
-var first__19652 = cljs.core.first(seq__19651);
-var seq__19651__$1 = cljs.core.next(seq__19651);
-var node = first__19652;
-var more = seq__19651__$1;
+var vec__19295 = temp__5751__auto__;
+var seq__19296 = cljs.core.seq(vec__19295);
+var first__19297 = cljs.core.first(seq__19296);
+var seq__19296__$1 = cljs.core.next(seq__19296);
+var node = first__19297;
+var more = seq__19296__$1;
 if(cljs.core.contains_QMARK_(expanded,node)){
-var G__19653 = more;
-var G__19654 = expanded;
-unexpanded = G__19653;
-expanded = G__19654;
+var G__19298 = more;
+var G__19299 = expanded;
+unexpanded = G__19298;
+expanded = G__19299;
 continue;
 } else {
-var G__19655 = cljs.core.concat.cljs$core$IFn$_invoke$arity$2(more,(neighbors.cljs$core$IFn$_invoke$arity$1 ? neighbors.cljs$core$IFn$_invoke$arity$1(node) : neighbors.call(null,node)));
-var G__19656 = cljs.core.conj.cljs$core$IFn$_invoke$arity$2(expanded,node);
-unexpanded = G__19655;
-expanded = G__19656;
+var G__19300 = cljs.core.concat.cljs$core$IFn$_invoke$arity$2(more,(neighbors.cljs$core$IFn$_invoke$arity$1 ? neighbors.cljs$core$IFn$_invoke$arity$1(node) : neighbors.call(null,node)));
+var G__19301 = cljs.core.conj.cljs$core$IFn$_invoke$arity$2(expanded,node);
+unexpanded = G__19300;
+expanded = G__19301;
 continue;
 }
 } else {
@@ -377,12 +377,12 @@ var this__4380__auto____$1 = this;
 return this__4380__auto____$1.cljs$core$ILookup$_lookup$arity$3(null,k__4381__auto__,null);
 }));
 
-(weavejester.dependency.MapDependencyGraph.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__4382__auto__,k19658,else__4383__auto__){
+(weavejester.dependency.MapDependencyGraph.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__4382__auto__,k19303,else__4383__auto__){
 var self__ = this;
 var this__4382__auto____$1 = this;
-var G__19662 = k19658;
-var G__19662__$1 = (((G__19662 instanceof cljs.core.Keyword))?G__19662.fqn:null);
-switch (G__19662__$1) {
+var G__19307 = k19303;
+var G__19307__$1 = (((G__19307 instanceof cljs.core.Keyword))?G__19307.fqn:null);
+switch (G__19307__$1) {
 case "dependencies":
 return self__.dependencies;
 
@@ -392,7 +392,7 @@ return self__.dependents;
 
 break;
 default:
-return cljs.core.get.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k19658,else__4383__auto__);
+return cljs.core.get.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k19303,else__4383__auto__);
 
 }
 }));
@@ -400,10 +400,10 @@ return cljs.core.get.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k19658,else__
 (weavejester.dependency.MapDependencyGraph.prototype.cljs$core$IKVReduce$_kv_reduce$arity$3 = (function (this__4399__auto__,f__4400__auto__,init__4401__auto__){
 var self__ = this;
 var this__4399__auto____$1 = this;
-return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (ret__4402__auto__,p__19663){
-var vec__19664 = p__19663;
-var k__4403__auto__ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__19664,(0),null);
-var v__4404__auto__ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__19664,(1),null);
+return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (ret__4402__auto__,p__19308){
+var vec__19309 = p__19308;
+var k__4403__auto__ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__19309,(0),null);
+var v__4404__auto__ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__19309,(1),null);
 return (f__4400__auto__.cljs$core$IFn$_invoke$arity$3 ? f__4400__auto__.cljs$core$IFn$_invoke$arity$3(ret__4402__auto__,k__4403__auto__,v__4404__auto__) : f__4400__auto__.call(null,ret__4402__auto__,k__4403__auto__,v__4404__auto__));
 }),init__4401__auto__,this__4399__auto____$1);
 }));
@@ -417,10 +417,10 @@ return cljs.core.pr_sequential_writer(writer__4395__auto__,cljs.core.pr_writer,"
 return cljs.core.pr_sequential_writer(writer__4395__auto__,pr_pair__4397__auto__,"#weavejester.dependency.MapDependencyGraph{",", ","}",opts__4396__auto__,cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.cst$kw$dependencies,self__.dependencies],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.cst$kw$dependents,self__.dependents],null))], null),self__.__extmap));
 }));
 
-(weavejester.dependency.MapDependencyGraph.prototype.cljs$core$IIterable$_iterator$arity$1 = (function (G__19657){
+(weavejester.dependency.MapDependencyGraph.prototype.cljs$core$IIterable$_iterator$arity$1 = (function (G__19302){
 var self__ = this;
-var G__19657__$1 = this;
-return (new cljs.core.RecordIter((0),G__19657__$1,2,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$dependencies,cljs.core.cst$kw$dependents], null),(cljs.core.truth_(self__.__extmap)?cljs.core._iterator(self__.__extmap):cljs.core.nil_iter())));
+var G__19302__$1 = this;
+return (new cljs.core.RecordIter((0),G__19302__$1,2,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$dependencies,cljs.core.cst$kw$dependents], null),(cljs.core.truth_(self__.__extmap)?cljs.core._iterator(self__.__extmap):cljs.core.nil_iter())));
 }));
 
 (weavejester.dependency.MapDependencyGraph.prototype.cljs$core$IMeta$_meta$arity$1 = (function (this__4378__auto__){
@@ -448,10 +448,10 @@ var h__4238__auto__ = self__.__hash;
 if((!((h__4238__auto__ == null)))){
 return h__4238__auto__;
 } else {
-var h__4238__auto____$1 = (function (){var fexpr__19667 = (function (coll__4377__auto__){
+var h__4238__auto____$1 = (function (){var fexpr__19312 = (function (coll__4377__auto__){
 return (-592853898 ^ cljs.core.hash_unordered_coll(coll__4377__auto__));
 });
-return fexpr__19667(this__4376__auto____$1);
+return fexpr__19312(this__4376__auto____$1);
 })();
 (self__.__hash = h__4238__auto____$1);
 
@@ -459,10 +459,10 @@ return h__4238__auto____$1;
 }
 }));
 
-(weavejester.dependency.MapDependencyGraph.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (this19659,other19660){
+(weavejester.dependency.MapDependencyGraph.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (this19304,other19305){
 var self__ = this;
-var this19659__$1 = this;
-return (((!((other19660 == null)))) && ((this19659__$1.constructor === other19660.constructor)) && (cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(this19659__$1.dependencies,other19660.dependencies)) && (cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(this19659__$1.dependents,other19660.dependents)) && (cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(this19659__$1.__extmap,other19660.__extmap)));
+var this19304__$1 = this;
+return (((!((other19305 == null)))) && ((this19304__$1.constructor === other19305.constructor)) && (cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(this19304__$1.dependencies,other19305.dependencies)) && (cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(this19304__$1.dependents,other19305.dependents)) && (cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(this19304__$1.__extmap,other19305.__extmap)));
 }));
 
 (weavejester.dependency.MapDependencyGraph.prototype.cljs$core$IMap$_dissoc$arity$2 = (function (this__4389__auto__,k__4390__auto__){
@@ -475,24 +475,24 @@ return (new weavejester.dependency.MapDependencyGraph(self__.dependencies,self__
 }
 }));
 
-(weavejester.dependency.MapDependencyGraph.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__4387__auto__,k__4388__auto__,G__19657){
+(weavejester.dependency.MapDependencyGraph.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__4387__auto__,k__4388__auto__,G__19302){
 var self__ = this;
 var this__4387__auto____$1 = this;
-var pred__19668 = cljs.core.keyword_identical_QMARK_;
-var expr__19669 = k__4388__auto__;
-if(cljs.core.truth_((function (){var G__19671 = cljs.core.cst$kw$dependencies;
-var G__19672 = expr__19669;
-return (pred__19668.cljs$core$IFn$_invoke$arity$2 ? pred__19668.cljs$core$IFn$_invoke$arity$2(G__19671,G__19672) : pred__19668.call(null,G__19671,G__19672));
+var pred__19313 = cljs.core.keyword_identical_QMARK_;
+var expr__19314 = k__4388__auto__;
+if(cljs.core.truth_((function (){var G__19316 = cljs.core.cst$kw$dependencies;
+var G__19317 = expr__19314;
+return (pred__19313.cljs$core$IFn$_invoke$arity$2 ? pred__19313.cljs$core$IFn$_invoke$arity$2(G__19316,G__19317) : pred__19313.call(null,G__19316,G__19317));
 })())){
-return (new weavejester.dependency.MapDependencyGraph(G__19657,self__.dependents,self__.__meta,self__.__extmap,null));
+return (new weavejester.dependency.MapDependencyGraph(G__19302,self__.dependents,self__.__meta,self__.__extmap,null));
 } else {
-if(cljs.core.truth_((function (){var G__19673 = cljs.core.cst$kw$dependents;
-var G__19674 = expr__19669;
-return (pred__19668.cljs$core$IFn$_invoke$arity$2 ? pred__19668.cljs$core$IFn$_invoke$arity$2(G__19673,G__19674) : pred__19668.call(null,G__19673,G__19674));
+if(cljs.core.truth_((function (){var G__19318 = cljs.core.cst$kw$dependents;
+var G__19319 = expr__19314;
+return (pred__19313.cljs$core$IFn$_invoke$arity$2 ? pred__19313.cljs$core$IFn$_invoke$arity$2(G__19318,G__19319) : pred__19313.call(null,G__19318,G__19319));
 })())){
-return (new weavejester.dependency.MapDependencyGraph(self__.dependencies,G__19657,self__.__meta,self__.__extmap,null));
+return (new weavejester.dependency.MapDependencyGraph(self__.dependencies,G__19302,self__.__meta,self__.__extmap,null));
 } else {
-return (new weavejester.dependency.MapDependencyGraph(self__.dependencies,self__.dependents,self__.__meta,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k__4388__auto__,G__19657),null));
+return (new weavejester.dependency.MapDependencyGraph(self__.dependencies,self__.dependents,self__.__meta,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k__4388__auto__,G__19302),null));
 }
 }
 }));
@@ -547,10 +547,10 @@ var graph__$1 = this;
 return clojure.set.union.cljs$core$IFn$_invoke$arity$2(cljs.core.set(cljs.core.keys(self__.dependencies)),cljs.core.set(cljs.core.keys(self__.dependents)));
 }));
 
-(weavejester.dependency.MapDependencyGraph.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__4379__auto__,G__19657){
+(weavejester.dependency.MapDependencyGraph.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__4379__auto__,G__19302){
 var self__ = this;
 var this__4379__auto____$1 = this;
-return (new weavejester.dependency.MapDependencyGraph(self__.dependencies,self__.dependents,G__19657,self__.__extmap,self__.__hash));
+return (new weavejester.dependency.MapDependencyGraph(self__.dependencies,self__.dependents,G__19302,self__.__extmap,self__.__hash));
 }));
 
 (weavejester.dependency.MapDependencyGraph.prototype.cljs$core$ICollection$_conj$arity$2 = (function (this__4385__auto__,entry__4386__auto__){
@@ -624,15 +624,15 @@ return (new weavejester.dependency.MapDependencyGraph(dependencies,dependents,nu
 /**
  * Factory function for weavejester.dependency/MapDependencyGraph, taking a map of keywords to field values.
  */
-weavejester.dependency.map__GT_MapDependencyGraph = (function weavejester$dependency$map__GT_MapDependencyGraph(G__19661){
-var extmap__4419__auto__ = (function (){var G__19675 = cljs.core.dissoc.cljs$core$IFn$_invoke$arity$variadic(G__19661,cljs.core.cst$kw$dependencies,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([cljs.core.cst$kw$dependents], 0));
-if(cljs.core.record_QMARK_(G__19661)){
-return cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,G__19675);
+weavejester.dependency.map__GT_MapDependencyGraph = (function weavejester$dependency$map__GT_MapDependencyGraph(G__19306){
+var extmap__4419__auto__ = (function (){var G__19320 = cljs.core.dissoc.cljs$core$IFn$_invoke$arity$variadic(G__19306,cljs.core.cst$kw$dependencies,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([cljs.core.cst$kw$dependents], 0));
+if(cljs.core.record_QMARK_(G__19306)){
+return cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,G__19320);
 } else {
-return G__19675;
+return G__19320;
 }
 })();
-return (new weavejester.dependency.MapDependencyGraph(cljs.core.cst$kw$dependencies.cljs$core$IFn$_invoke$arity$1(G__19661),cljs.core.cst$kw$dependents.cljs$core$IFn$_invoke$arity$1(G__19661),null,cljs.core.not_empty(extmap__4419__auto__),null));
+return (new weavejester.dependency.MapDependencyGraph(cljs.core.cst$kw$dependencies.cljs$core$IFn$_invoke$arity$1(G__19306),cljs.core.cst$kw$dependents.cljs$core$IFn$_invoke$arity$1(G__19306),null,cljs.core.not_empty(extmap__4419__auto__),null));
 });
 
 /**
@@ -659,8 +659,8 @@ return cljs.core.contains_QMARK_(weavejester.dependency.transitive_dependents(gr
  *   nodes is ambiguous.
  */
 weavejester.dependency.topo_sort = (function weavejester$dependency$topo_sort(var_args){
-var G__19681 = arguments.length;
-switch (G__19681) {
+var G__19326 = arguments.length;
+switch (G__19326) {
 case 1:
 return weavejester.dependency.topo_sort.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -683,26 +683,26 @@ return weavejester.dependency.topo_sort.cljs$core$IFn$_invoke$arity$2(cljs.core.
 var sorted = cljs.core.List.EMPTY;
 var g = graph;
 var todo = cljs.core.set(cljs.core.filter.cljs$core$IFn$_invoke$arity$2(((function (sorted,g){
-return (function (p1__19677_SHARP_){
-return cljs.core.empty_QMARK_(weavejester.dependency.immediate_dependents(graph,p1__19677_SHARP_));
+return (function (p1__19322_SHARP_){
+return cljs.core.empty_QMARK_(weavejester.dependency.immediate_dependents(graph,p1__19322_SHARP_));
 });})(sorted,g))
 ,weavejester.dependency.nodes(graph)));
 while(true){
 if(cljs.core.empty_QMARK_(todo)){
 return sorted;
 } else {
-var vec__19688 = cljs.core.sort.cljs$core$IFn$_invoke$arity$2(((function (sorted,g,todo){
-return (function (p1__19679_SHARP_,p2__19678_SHARP_){
-return (comp.cljs$core$IFn$_invoke$arity$2 ? comp.cljs$core$IFn$_invoke$arity$2(p2__19678_SHARP_,p1__19679_SHARP_) : comp.call(null,p2__19678_SHARP_,p1__19679_SHARP_));
+var vec__19333 = cljs.core.sort.cljs$core$IFn$_invoke$arity$2(((function (sorted,g,todo){
+return (function (p1__19324_SHARP_,p2__19323_SHARP_){
+return (comp.cljs$core$IFn$_invoke$arity$2 ? comp.cljs$core$IFn$_invoke$arity$2(p2__19323_SHARP_,p1__19324_SHARP_) : comp.call(null,p2__19323_SHARP_,p1__19324_SHARP_));
 });})(sorted,g,todo))
 ,todo);
-var seq__19689 = cljs.core.seq(vec__19688);
-var first__19690 = cljs.core.first(seq__19689);
-var seq__19689__$1 = cljs.core.next(seq__19689);
-var node = first__19690;
-var more = seq__19689__$1;
+var seq__19334 = cljs.core.seq(vec__19333);
+var first__19335 = cljs.core.first(seq__19334);
+var seq__19334__$1 = cljs.core.next(seq__19334);
+var node = first__19335;
+var more = seq__19334__$1;
 var deps = weavejester.dependency.immediate_dependencies(g,node);
-var vec__19691 = (function (){var deps__$1 = deps;
+var vec__19336 = (function (){var deps__$1 = deps;
 var g__$1 = g;
 var add = cljs.core.PersistentHashSet.EMPTY;
 while(true){
@@ -710,20 +710,20 @@ if(cljs.core.seq(deps__$1)){
 var d = cljs.core.first(deps__$1);
 var g_SINGLEQUOTE_ = weavejester.dependency.remove_edge(g__$1,node,d);
 if(cljs.core.empty_QMARK_(weavejester.dependency.immediate_dependents(g_SINGLEQUOTE_,d))){
-var G__19695 = cljs.core.rest(deps__$1);
-var G__19696 = g_SINGLEQUOTE_;
-var G__19697 = cljs.core.conj.cljs$core$IFn$_invoke$arity$2(add,d);
-deps__$1 = G__19695;
-g__$1 = G__19696;
-add = G__19697;
+var G__19340 = cljs.core.rest(deps__$1);
+var G__19341 = g_SINGLEQUOTE_;
+var G__19342 = cljs.core.conj.cljs$core$IFn$_invoke$arity$2(add,d);
+deps__$1 = G__19340;
+g__$1 = G__19341;
+add = G__19342;
 continue;
 } else {
-var G__19698 = cljs.core.rest(deps__$1);
-var G__19699 = g_SINGLEQUOTE_;
-var G__19700 = add;
-deps__$1 = G__19698;
-g__$1 = G__19699;
-add = G__19700;
+var G__19343 = cljs.core.rest(deps__$1);
+var G__19344 = g_SINGLEQUOTE_;
+var G__19345 = add;
+deps__$1 = G__19343;
+g__$1 = G__19344;
+add = G__19345;
 continue;
 }
 } else {
@@ -732,14 +732,14 @@ return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMP
 break;
 }
 })();
-var add = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__19691,(0),null);
-var g_SINGLEQUOTE_ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__19691,(1),null);
-var G__19701 = cljs.core.cons(node,sorted);
-var G__19702 = weavejester.dependency.remove_node(g_SINGLEQUOTE_,node);
-var G__19703 = clojure.set.union.cljs$core$IFn$_invoke$arity$2(cljs.core.set(more),cljs.core.set(add));
-sorted = G__19701;
-g = G__19702;
-todo = G__19703;
+var add = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__19336,(0),null);
+var g_SINGLEQUOTE_ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__19336,(1),null);
+var G__19346 = cljs.core.cons(node,sorted);
+var G__19347 = weavejester.dependency.remove_node(g_SINGLEQUOTE_,node);
+var G__19348 = clojure.set.union.cljs$core$IFn$_invoke$arity$2(cljs.core.set(more),cljs.core.set(add));
+sorted = G__19346;
+g = G__19347;
+todo = G__19348;
 continue;
 }
 break;
@@ -756,8 +756,8 @@ weavejester.dependency.max_number = Number.MAX_VALUE;
  *   provide secondary sorting when the order of nodes is ambiguous.
  */
 weavejester.dependency.topo_comparator = (function weavejester$dependency$topo_comparator(var_args){
-var G__19705 = arguments.length;
-switch (G__19705) {
+var G__19350 = arguments.length;
+switch (G__19350) {
 case 1:
 return weavejester.dependency.topo_comparator.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 

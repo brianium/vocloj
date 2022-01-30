@@ -35,8 +35,8 @@ goog.require('vocloj.core.impl');
  * other effects in response to state changes.
  */
 vocloj.core.add_effect = (function vocloj$core$add_effect(var_args){
-var G__18540 = arguments.length;
-switch (G__18540) {
+var G__18704 = arguments.length;
+switch (G__18704) {
 case 3:
 return vocloj.core.add_effect.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 
@@ -89,8 +89,8 @@ return vocloj.core.impl.add_effect.cljs$core$IFn$_invoke$arity$5(sm,key,from,to,
  * ```
  */
 vocloj.core.transition = (function vocloj$core$transition(var_args){
-var G__18543 = arguments.length;
-switch (G__18543) {
+var G__18707 = arguments.length;
+switch (G__18707) {
 case 3:
 return vocloj.core.transition.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 
@@ -149,42 +149,42 @@ vocloj.core.init = (function vocloj$core$init(initializable){
 return vocloj.core.impl.init(initializable);
 });
 /**
- * Actually begin listening for speech on the given recognizer.
+ * Starts the lifecycle of a component that implements the Lifecycle protocol.
  * 
  * Returns the value given.
  */
-vocloj.core.start = (function vocloj$core$start(recognizer){
-return vocloj.core.impl.start(recognizer);
+vocloj.core.start = (function vocloj$core$start(component){
+return vocloj.core.impl.start(component);
 });
 /**
- * Makes the given recognizer stop listening for speech.
+ * Stops the lifecycle of a component that implements the Lifecycle protocol.
  * 
  * Returns the value given.
  */
-vocloj.core.stop = (function vocloj$core$stop(recognizer){
-return vocloj.core.impl.stop(recognizer);
+vocloj.core.stop = (function vocloj$core$stop(component){
+return vocloj.core.impl.stop(component);
 });
 /**
- * Probably the preferred means for using a speech recognizer.
+ * Probably the preferred means for using a speech receiver
  *   
  * This function serves as a shortcut for initializing then starting the
- * given recognizer.
+ * given receiver
  * 
  * When called with one argument, listen returns a core.async channel that will receive
- * transcript results.
+ * speech results.
  * 
  * The following snippet shows the implementation of listen's two argument
- * alternative. Different stop logic can be used that calls (stop recognizer) explicitly.
+ * alternative. Different stop logic can be used that calls (stop receiver) explicitly.
  * 
  * ```clojure
- * (let [ch      (listen recognizer)
- *       stop-ch (-> recognizer current-state :data :stop-ch)]
+ * (let [ch      (listen speech-receiver)
+ *       stop-ch (get-stop-channel speech-receiver))]
  *   (async/go-loop []
  *     (let [[v p] (async/alts! [ch stop-ch])]
  *       (when (= p ch)
  *         (handler v)
  *         (recur))))
- *   recognizer)
+ *   speech-receiver)
  * ```
  * 
  * When called with two arguments, the second argument must be an fn
@@ -194,16 +194,11 @@ return vocloj.core.impl.stop(recognizer);
  * (listen recognizer (fn [result] (do-something-with-result result)))
  * ```
  * 
- * The results put on the channel will always be lists of hash-maps containing
- * minimally :transcript and :confidence keys:
- * 
- * ```clojure
- * ({:transcript "Hello from my microphone!" :confidence 0.999}) 
- * ```
+ * The results put on the channel will vary by implementation.
  */
 vocloj.core.listen = (function vocloj$core$listen(var_args){
-var G__18546 = arguments.length;
-switch (G__18546) {
+var G__18710 = arguments.length;
+switch (G__18710) {
 case 1:
 return vocloj.core.listen.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -218,12 +213,12 @@ throw (new Error(["Invalid arity: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(
 }
 });
 
-(vocloj.core.listen.cljs$core$IFn$_invoke$arity$1 = (function (recognizer){
-return vocloj.core.impl.listen.cljs$core$IFn$_invoke$arity$1(recognizer);
+(vocloj.core.listen.cljs$core$IFn$_invoke$arity$1 = (function (speech_receiver){
+return vocloj.core.impl.listen.cljs$core$IFn$_invoke$arity$1(speech_receiver);
 }));
 
-(vocloj.core.listen.cljs$core$IFn$_invoke$arity$2 = (function (recognizer,handler){
-return vocloj.core.impl.listen.cljs$core$IFn$_invoke$arity$2(recognizer,handler);
+(vocloj.core.listen.cljs$core$IFn$_invoke$arity$2 = (function (speech_receiver,handler){
+return vocloj.core.impl.listen.cljs$core$IFn$_invoke$arity$2(speech_receiver,handler);
 }));
 
 (vocloj.core.listen.cljs$lang$maxFixedArity = 2);

@@ -8,7 +8,7 @@ goog.require('cljs.core.constants');
  */
 vocloj.protocols.Initializable = function(){};
 
-var vocloj$protocols$Initializable$_init$dyn_14561 = (function (_){
+var vocloj$protocols$Initializable$_init$dyn_16590 = (function (_){
 var x__4428__auto__ = (((_ == null))?null:_);
 var m__4429__auto__ = (vocloj.protocols._init[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -29,7 +29,7 @@ vocloj.protocols._init = (function vocloj$protocols$_init(_){
 if((((!((_ == null)))) && ((!((_.vocloj$protocols$Initializable$_init$arity$1 == null)))))){
 return _.vocloj$protocols$Initializable$_init$arity$1(_);
 } else {
-return vocloj$protocols$Initializable$_init$dyn_14561(_);
+return vocloj$protocols$Initializable$_init$dyn_16590(_);
 }
 });
 
@@ -39,7 +39,7 @@ return vocloj$protocols$Initializable$_init$dyn_14561(_);
  */
 vocloj.protocols.Lifecycle = function(){};
 
-var vocloj$protocols$Lifecycle$_start$dyn_14562 = (function (_){
+var vocloj$protocols$Lifecycle$_start$dyn_16591 = (function (_){
 var x__4428__auto__ = (((_ == null))?null:_);
 var m__4429__auto__ = (vocloj.protocols._start[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -60,11 +60,11 @@ vocloj.protocols._start = (function vocloj$protocols$_start(_){
 if((((!((_ == null)))) && ((!((_.vocloj$protocols$Lifecycle$_start$arity$1 == null)))))){
 return _.vocloj$protocols$Lifecycle$_start$arity$1(_);
 } else {
-return vocloj$protocols$Lifecycle$_start$dyn_14562(_);
+return vocloj$protocols$Lifecycle$_start$dyn_16591(_);
 }
 });
 
-var vocloj$protocols$Lifecycle$_stop$dyn_14563 = (function (_){
+var vocloj$protocols$Lifecycle$_stop$dyn_16592 = (function (_){
 var x__4428__auto__ = (((_ == null))?null:_);
 var m__4429__auto__ = (vocloj.protocols._stop[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -85,7 +85,7 @@ vocloj.protocols._stop = (function vocloj$protocols$_stop(_){
 if((((!((_ == null)))) && ((!((_.vocloj$protocols$Lifecycle$_stop$arity$1 == null)))))){
 return _.vocloj$protocols$Lifecycle$_stop$arity$1(_);
 } else {
-return vocloj$protocols$Lifecycle$_stop$dyn_14563(_);
+return vocloj$protocols$Lifecycle$_stop$dyn_16592(_);
 }
 });
 
@@ -95,7 +95,7 @@ return vocloj$protocols$Lifecycle$_stop$dyn_14563(_);
  */
 vocloj.protocols.Suspendable = function(){};
 
-var vocloj$protocols$Suspendable$_pause$dyn_14564 = (function (_){
+var vocloj$protocols$Suspendable$_pause$dyn_16593 = (function (_){
 var x__4428__auto__ = (((_ == null))?null:_);
 var m__4429__auto__ = (vocloj.protocols._pause[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -116,11 +116,11 @@ vocloj.protocols._pause = (function vocloj$protocols$_pause(_){
 if((((!((_ == null)))) && ((!((_.vocloj$protocols$Suspendable$_pause$arity$1 == null)))))){
 return _.vocloj$protocols$Suspendable$_pause$arity$1(_);
 } else {
-return vocloj$protocols$Suspendable$_pause$dyn_14564(_);
+return vocloj$protocols$Suspendable$_pause$dyn_16593(_);
 }
 });
 
-var vocloj$protocols$Suspendable$_resume$dyn_14565 = (function (_){
+var vocloj$protocols$Suspendable$_resume$dyn_16594 = (function (_){
 var x__4428__auto__ = (((_ == null))?null:_);
 var m__4429__auto__ = (vocloj.protocols._resume[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -141,7 +141,7 @@ vocloj.protocols._resume = (function vocloj$protocols$_resume(_){
 if((((!((_ == null)))) && ((!((_.vocloj$protocols$Suspendable$_resume$arity$1 == null)))))){
 return _.vocloj$protocols$Suspendable$_resume$arity$1(_);
 } else {
-return vocloj$protocols$Suspendable$_resume$dyn_14565(_);
+return vocloj$protocols$Suspendable$_resume$dyn_16594(_);
 }
 });
 
@@ -151,7 +151,7 @@ return vocloj$protocols$Suspendable$_resume$dyn_14565(_);
  */
 vocloj.protocols.SynthesizesSpeech = function(){};
 
-var vocloj$protocols$SynthesizesSpeech$_cancel$dyn_14566 = (function (_){
+var vocloj$protocols$SynthesizesSpeech$_cancel$dyn_16595 = (function (_){
 var x__4428__auto__ = (((_ == null))?null:_);
 var m__4429__auto__ = (vocloj.protocols._cancel[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -172,11 +172,11 @@ vocloj.protocols._cancel = (function vocloj$protocols$_cancel(_){
 if((((!((_ == null)))) && ((!((_.vocloj$protocols$SynthesizesSpeech$_cancel$arity$1 == null)))))){
 return _.vocloj$protocols$SynthesizesSpeech$_cancel$arity$1(_);
 } else {
-return vocloj$protocols$SynthesizesSpeech$_cancel$dyn_14566(_);
+return vocloj$protocols$SynthesizesSpeech$_cancel$dyn_16595(_);
 }
 });
 
-var vocloj$protocols$SynthesizesSpeech$_speak$dyn_14567 = (function (_,voice_id,utterance){
+var vocloj$protocols$SynthesizesSpeech$_speak$dyn_16596 = (function (_,voice_id,utterance){
 var x__4428__auto__ = (((_ == null))?null:_);
 var m__4429__auto__ = (vocloj.protocols._speak[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -197,7 +197,7 @@ vocloj.protocols._speak = (function vocloj$protocols$_speak(_,voice_id,utterance
 if((((!((_ == null)))) && ((!((_.vocloj$protocols$SynthesizesSpeech$_speak$arity$3 == null)))))){
 return _.vocloj$protocols$SynthesizesSpeech$_speak$arity$3(_,voice_id,utterance);
 } else {
-return vocloj$protocols$SynthesizesSpeech$_speak$dyn_14567(_,voice_id,utterance);
+return vocloj$protocols$SynthesizesSpeech$_speak$dyn_16596(_,voice_id,utterance);
 }
 });
 
@@ -207,7 +207,7 @@ return vocloj$protocols$SynthesizesSpeech$_speak$dyn_14567(_,voice_id,utterance)
  */
 vocloj.protocols.StateMachine = function(){};
 
-var vocloj$protocols$StateMachine$_add_effect$dyn_14568 = (function (_,key,fn_3){
+var vocloj$protocols$StateMachine$_add_effect$dyn_16597 = (function (_,key,fn_3){
 var x__4428__auto__ = (((_ == null))?null:_);
 var m__4429__auto__ = (vocloj.protocols._add_effect[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -228,11 +228,11 @@ vocloj.protocols._add_effect = (function vocloj$protocols$_add_effect(_,key,fn_3
 if((((!((_ == null)))) && ((!((_.vocloj$protocols$StateMachine$_add_effect$arity$3 == null)))))){
 return _.vocloj$protocols$StateMachine$_add_effect$arity$3(_,key,fn_3);
 } else {
-return vocloj$protocols$StateMachine$_add_effect$dyn_14568(_,key,fn_3);
+return vocloj$protocols$StateMachine$_add_effect$dyn_16597(_,key,fn_3);
 }
 });
 
-var vocloj$protocols$StateMachine$_transition$dyn_14569 = (function (_,event,payload){
+var vocloj$protocols$StateMachine$_transition$dyn_16598 = (function (_,event,payload){
 var x__4428__auto__ = (((_ == null))?null:_);
 var m__4429__auto__ = (vocloj.protocols._transition[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -253,11 +253,11 @@ vocloj.protocols._transition = (function vocloj$protocols$_transition(_,event,pa
 if((((!((_ == null)))) && ((!((_.vocloj$protocols$StateMachine$_transition$arity$3 == null)))))){
 return _.vocloj$protocols$StateMachine$_transition$arity$3(_,event,payload);
 } else {
-return vocloj$protocols$StateMachine$_transition$dyn_14569(_,event,payload);
+return vocloj$protocols$StateMachine$_transition$dyn_16598(_,event,payload);
 }
 });
 
-var vocloj$protocols$StateMachine$_current_state$dyn_14570 = (function (_){
+var vocloj$protocols$StateMachine$_current_state$dyn_16599 = (function (_){
 var x__4428__auto__ = (((_ == null))?null:_);
 var m__4429__auto__ = (vocloj.protocols._current_state[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -278,7 +278,7 @@ vocloj.protocols._current_state = (function vocloj$protocols$_current_state(_){
 if((((!((_ == null)))) && ((!((_.vocloj$protocols$StateMachine$_current_state$arity$1 == null)))))){
 return _.vocloj$protocols$StateMachine$_current_state$arity$1(_);
 } else {
-return vocloj$protocols$StateMachine$_current_state$dyn_14570(_);
+return vocloj$protocols$StateMachine$_current_state$dyn_16599(_);
 }
 });
 
@@ -288,7 +288,7 @@ return vocloj$protocols$StateMachine$_current_state$dyn_14570(_);
  */
 vocloj.protocols.ReceivesSpeech = function(){};
 
-var vocloj$protocols$ReceivesSpeech$_get_speech_channel$dyn_14571 = (function (_){
+var vocloj$protocols$ReceivesSpeech$_get_speech_channel$dyn_16600 = (function (_){
 var x__4428__auto__ = (((_ == null))?null:_);
 var m__4429__auto__ = (vocloj.protocols._get_speech_channel[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -309,11 +309,11 @@ vocloj.protocols._get_speech_channel = (function vocloj$protocols$_get_speech_ch
 if((((!((_ == null)))) && ((!((_.vocloj$protocols$ReceivesSpeech$_get_speech_channel$arity$1 == null)))))){
 return _.vocloj$protocols$ReceivesSpeech$_get_speech_channel$arity$1(_);
 } else {
-return vocloj$protocols$ReceivesSpeech$_get_speech_channel$dyn_14571(_);
+return vocloj$protocols$ReceivesSpeech$_get_speech_channel$dyn_16600(_);
 }
 });
 
-var vocloj$protocols$ReceivesSpeech$_listen$dyn_14572 = (function (_){
+var vocloj$protocols$ReceivesSpeech$_listen$dyn_16601 = (function (_){
 var x__4428__auto__ = (((_ == null))?null:_);
 var m__4429__auto__ = (vocloj.protocols._listen[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -334,11 +334,11 @@ vocloj.protocols._listen = (function vocloj$protocols$_listen(_){
 if((((!((_ == null)))) && ((!((_.vocloj$protocols$ReceivesSpeech$_listen$arity$1 == null)))))){
 return _.vocloj$protocols$ReceivesSpeech$_listen$arity$1(_);
 } else {
-return vocloj$protocols$ReceivesSpeech$_listen$dyn_14572(_);
+return vocloj$protocols$ReceivesSpeech$_listen$dyn_16601(_);
 }
 });
 
-var vocloj$protocols$ReceivesSpeech$_get_stop_channel$dyn_14573 = (function (_){
+var vocloj$protocols$ReceivesSpeech$_get_stop_channel$dyn_16602 = (function (_){
 var x__4428__auto__ = (((_ == null))?null:_);
 var m__4429__auto__ = (vocloj.protocols._get_stop_channel[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -359,7 +359,7 @@ vocloj.protocols._get_stop_channel = (function vocloj$protocols$_get_stop_channe
 if((((!((_ == null)))) && ((!((_.vocloj$protocols$ReceivesSpeech$_get_stop_channel$arity$1 == null)))))){
 return _.vocloj$protocols$ReceivesSpeech$_get_stop_channel$arity$1(_);
 } else {
-return vocloj$protocols$ReceivesSpeech$_get_stop_channel$dyn_14573(_);
+return vocloj$protocols$ReceivesSpeech$_get_stop_channel$dyn_16602(_);
 }
 });
 

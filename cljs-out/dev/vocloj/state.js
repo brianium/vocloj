@@ -35,8 +35,8 @@ goog.require('vocloj.state.impl');
  * Clojure's own atoms.
  */
 vocloj.state.create_atom_state_machine = (function vocloj$state$create_atom_state_machine(var_args){
-var G__19264 = arguments.length;
-switch (G__19264) {
+var G__19241 = arguments.length;
+switch (G__19241) {
 case 2:
 return vocloj.state.create_atom_state_machine.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -78,8 +78,8 @@ return vocloj.state.impl.__GT_AtomStateMachine(states,(atom_fn.cljs$core$IFn$_in
  * recognizer will do nothing until it is initialized then started.
  */
 vocloj.state.create_recognizer_state_machine = (function vocloj$state$create_recognizer_state_machine(var_args){
-var G__19267 = arguments.length;
-switch (G__19267) {
+var G__19244 = arguments.length;
+switch (G__19244) {
 case 1:
 return vocloj.state.create_recognizer_state_machine.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -124,8 +124,8 @@ return vocloj.state.create_recognizer_state_machine.cljs$core$IFn$_invoke$arity$
  * synthesizer will do nothing until it is initialized.
  */
 vocloj.state.create_synthesis_state_machine = (function vocloj$state$create_synthesis_state_machine(var_args){
-var G__19270 = arguments.length;
-switch (G__19270) {
+var G__19247 = arguments.length;
+switch (G__19247) {
 case 1:
 return vocloj.state.create_synthesis_state_machine.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -150,9 +150,41 @@ return vocloj.state.create_synthesis_state_machine.cljs$core$IFn$_invoke$arity$1
 
 (vocloj.state.create_synthesis_state_machine.cljs$lang$maxFixedArity = 1);
 
+/**
+ * This is merely a suggestion for microphone state machines.
+ * 
+ * The atom-fn functions per create-atom-state-machine.
+ * 
+ * The underlying state machine supports the following states:
+ * 
+ * ```clojure
+ * {:dormant    {:error :error
+ *               :init  :ready}
+ *   :error     {:error :error
+ *               :init  :ready}
+ *   :stopped   {:error :error
+ *               :init  :ready}
+ *   :ready     {:start :recording}
+ *   :recording {:end   :dormant
+ *               :error :error
+ *               :mute  :muted
+ *               :pause :paused
+ *               :stop  :stopped}
+ *   :muted     {:end    :dormant
+ *               :stop   :stopped
+ *               :unmute :recording}
+ *   :paused    {:end    :dormant
+ *               :mute   :muted
+ *               :resume :record
+ *               :stop   :stopped}}
+ * ```
+ * 
+ * The initial state reflects a dormant microphone with nil data in state. A dormant
+ * synthesizer will do nothing until it is initialized.
+ */
 vocloj.state.create_microphone_stream_state_machine = (function vocloj$state$create_microphone_stream_state_machine(var_args){
-var G__19273 = arguments.length;
-switch (G__19273) {
+var G__19250 = arguments.length;
+switch (G__19250) {
 case 1:
 return vocloj.state.create_microphone_stream_state_machine.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 

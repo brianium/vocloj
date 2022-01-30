@@ -38,12 +38,12 @@ var this__4380__auto____$1 = this;
 return this__4380__auto____$1.cljs$core$ILookup$_lookup$arity$3(null,k__4381__auto__,null);
 }));
 
-(vocloj.state.impl.AtomStateMachine.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__4382__auto__,k19242,else__4383__auto__){
+(vocloj.state.impl.AtomStateMachine.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__4382__auto__,k19219,else__4383__auto__){
 var self__ = this;
 var this__4382__auto____$1 = this;
-var G__19246 = k19242;
-var G__19246__$1 = (((G__19246 instanceof cljs.core.Keyword))?G__19246.fqn:null);
-switch (G__19246__$1) {
+var G__19223 = k19219;
+var G__19223__$1 = (((G__19223 instanceof cljs.core.Keyword))?G__19223.fqn:null);
+switch (G__19223__$1) {
 case "states":
 return self__.states;
 
@@ -53,7 +53,7 @@ return self__._STAR_state;
 
 break;
 default:
-return cljs.core.get.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k19242,else__4383__auto__);
+return cljs.core.get.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k19219,else__4383__auto__);
 
 }
 }));
@@ -61,10 +61,10 @@ return cljs.core.get.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k19242,else__
 (vocloj.state.impl.AtomStateMachine.prototype.cljs$core$IKVReduce$_kv_reduce$arity$3 = (function (this__4399__auto__,f__4400__auto__,init__4401__auto__){
 var self__ = this;
 var this__4399__auto____$1 = this;
-return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (ret__4402__auto__,p__19247){
-var vec__19248 = p__19247;
-var k__4403__auto__ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__19248,(0),null);
-var v__4404__auto__ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__19248,(1),null);
+return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (ret__4402__auto__,p__19224){
+var vec__19225 = p__19224;
+var k__4403__auto__ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__19225,(0),null);
+var v__4404__auto__ = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__19225,(1),null);
 return (f__4400__auto__.cljs$core$IFn$_invoke$arity$3 ? f__4400__auto__.cljs$core$IFn$_invoke$arity$3(ret__4402__auto__,k__4403__auto__,v__4404__auto__) : f__4400__auto__.call(null,ret__4402__auto__,k__4403__auto__,v__4404__auto__));
 }),init__4401__auto__,this__4399__auto____$1);
 }));
@@ -78,10 +78,10 @@ return cljs.core.pr_sequential_writer(writer__4395__auto__,cljs.core.pr_writer,"
 return cljs.core.pr_sequential_writer(writer__4395__auto__,pr_pair__4397__auto__,"#vocloj.state.impl.AtomStateMachine{",", ","}",opts__4396__auto__,cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.cst$kw$states,self__.states],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.cst$kw$_STAR_state,self__._STAR_state],null))], null),self__.__extmap));
 }));
 
-(vocloj.state.impl.AtomStateMachine.prototype.cljs$core$IIterable$_iterator$arity$1 = (function (G__19241){
+(vocloj.state.impl.AtomStateMachine.prototype.cljs$core$IIterable$_iterator$arity$1 = (function (G__19218){
 var self__ = this;
-var G__19241__$1 = this;
-return (new cljs.core.RecordIter((0),G__19241__$1,2,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$states,cljs.core.cst$kw$_STAR_state], null),(cljs.core.truth_(self__.__extmap)?cljs.core._iterator(self__.__extmap):cljs.core.nil_iter())));
+var G__19218__$1 = this;
+return (new cljs.core.RecordIter((0),G__19218__$1,2,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$states,cljs.core.cst$kw$_STAR_state], null),(cljs.core.truth_(self__.__extmap)?cljs.core._iterator(self__.__extmap):cljs.core.nil_iter())));
 }));
 
 (vocloj.state.impl.AtomStateMachine.prototype.cljs$core$IMeta$_meta$arity$1 = (function (this__4378__auto__){
@@ -137,10 +137,10 @@ var h__4238__auto__ = self__.__hash;
 if((!((h__4238__auto__ == null)))){
 return h__4238__auto__;
 } else {
-var h__4238__auto____$1 = (function (){var fexpr__19251 = (function (coll__4377__auto__){
+var h__4238__auto____$1 = (function (){var fexpr__19228 = (function (coll__4377__auto__){
 return (1893980029 ^ cljs.core.hash_unordered_coll(coll__4377__auto__));
 });
-return fexpr__19251(this__4376__auto____$1);
+return fexpr__19228(this__4376__auto____$1);
 })();
 (self__.__hash = h__4238__auto____$1);
 
@@ -148,10 +148,10 @@ return h__4238__auto____$1;
 }
 }));
 
-(vocloj.state.impl.AtomStateMachine.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (this19243,other19244){
+(vocloj.state.impl.AtomStateMachine.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (this19220,other19221){
 var self__ = this;
-var this19243__$1 = this;
-return (((!((other19244 == null)))) && ((this19243__$1.constructor === other19244.constructor)) && (cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(this19243__$1.states,other19244.states)) && (cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(this19243__$1._STAR_state,other19244._STAR_state)) && (cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(this19243__$1.__extmap,other19244.__extmap)));
+var this19220__$1 = this;
+return (((!((other19221 == null)))) && ((this19220__$1.constructor === other19221.constructor)) && (cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(this19220__$1.states,other19221.states)) && (cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(this19220__$1._STAR_state,other19221._STAR_state)) && (cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(this19220__$1.__extmap,other19221.__extmap)));
 }));
 
 (vocloj.state.impl.AtomStateMachine.prototype.cljs$core$IMap$_dissoc$arity$2 = (function (this__4389__auto__,k__4390__auto__){
@@ -164,24 +164,24 @@ return (new vocloj.state.impl.AtomStateMachine(self__.states,self__._STAR_state,
 }
 }));
 
-(vocloj.state.impl.AtomStateMachine.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__4387__auto__,k__4388__auto__,G__19241){
+(vocloj.state.impl.AtomStateMachine.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__4387__auto__,k__4388__auto__,G__19218){
 var self__ = this;
 var this__4387__auto____$1 = this;
-var pred__19252 = cljs.core.keyword_identical_QMARK_;
-var expr__19253 = k__4388__auto__;
-if(cljs.core.truth_((function (){var G__19255 = cljs.core.cst$kw$states;
-var G__19256 = expr__19253;
-return (pred__19252.cljs$core$IFn$_invoke$arity$2 ? pred__19252.cljs$core$IFn$_invoke$arity$2(G__19255,G__19256) : pred__19252.call(null,G__19255,G__19256));
+var pred__19229 = cljs.core.keyword_identical_QMARK_;
+var expr__19230 = k__4388__auto__;
+if(cljs.core.truth_((function (){var G__19232 = cljs.core.cst$kw$states;
+var G__19233 = expr__19230;
+return (pred__19229.cljs$core$IFn$_invoke$arity$2 ? pred__19229.cljs$core$IFn$_invoke$arity$2(G__19232,G__19233) : pred__19229.call(null,G__19232,G__19233));
 })())){
-return (new vocloj.state.impl.AtomStateMachine(G__19241,self__._STAR_state,self__.__meta,self__.__extmap,null));
+return (new vocloj.state.impl.AtomStateMachine(G__19218,self__._STAR_state,self__.__meta,self__.__extmap,null));
 } else {
-if(cljs.core.truth_((function (){var G__19257 = cljs.core.cst$kw$_STAR_state;
-var G__19258 = expr__19253;
-return (pred__19252.cljs$core$IFn$_invoke$arity$2 ? pred__19252.cljs$core$IFn$_invoke$arity$2(G__19257,G__19258) : pred__19252.call(null,G__19257,G__19258));
+if(cljs.core.truth_((function (){var G__19234 = cljs.core.cst$kw$_STAR_state;
+var G__19235 = expr__19230;
+return (pred__19229.cljs$core$IFn$_invoke$arity$2 ? pred__19229.cljs$core$IFn$_invoke$arity$2(G__19234,G__19235) : pred__19229.call(null,G__19234,G__19235));
 })())){
-return (new vocloj.state.impl.AtomStateMachine(self__.states,G__19241,self__.__meta,self__.__extmap,null));
+return (new vocloj.state.impl.AtomStateMachine(self__.states,G__19218,self__.__meta,self__.__extmap,null));
 } else {
-return (new vocloj.state.impl.AtomStateMachine(self__.states,self__._STAR_state,self__.__meta,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k__4388__auto__,G__19241),null));
+return (new vocloj.state.impl.AtomStateMachine(self__.states,self__._STAR_state,self__.__meta,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k__4388__auto__,G__19218),null));
 }
 }
 }));
@@ -192,10 +192,10 @@ var this__4392__auto____$1 = this;
 return cljs.core.seq(cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.MapEntry(cljs.core.cst$kw$states,self__.states,null)),(new cljs.core.MapEntry(cljs.core.cst$kw$_STAR_state,self__._STAR_state,null))], null),self__.__extmap));
 }));
 
-(vocloj.state.impl.AtomStateMachine.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__4379__auto__,G__19241){
+(vocloj.state.impl.AtomStateMachine.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__4379__auto__,G__19218){
 var self__ = this;
 var this__4379__auto____$1 = this;
-return (new vocloj.state.impl.AtomStateMachine(self__.states,self__._STAR_state,G__19241,self__.__extmap,self__.__hash));
+return (new vocloj.state.impl.AtomStateMachine(self__.states,self__._STAR_state,G__19218,self__.__extmap,self__.__hash));
 }));
 
 (vocloj.state.impl.AtomStateMachine.prototype.cljs$core$ICollection$_conj$arity$2 = (function (this__4385__auto__,entry__4386__auto__){
@@ -232,14 +232,14 @@ return (new vocloj.state.impl.AtomStateMachine(states,_STAR_state,null,null,null
 /**
  * Factory function for vocloj.state.impl/AtomStateMachine, taking a map of keywords to field values.
  */
-vocloj.state.impl.map__GT_AtomStateMachine = (function vocloj$state$impl$map__GT_AtomStateMachine(G__19245){
-var extmap__4419__auto__ = (function (){var G__19259 = cljs.core.dissoc.cljs$core$IFn$_invoke$arity$variadic(G__19245,cljs.core.cst$kw$states,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([cljs.core.cst$kw$_STAR_state], 0));
-if(cljs.core.record_QMARK_(G__19245)){
-return cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,G__19259);
+vocloj.state.impl.map__GT_AtomStateMachine = (function vocloj$state$impl$map__GT_AtomStateMachine(G__19222){
+var extmap__4419__auto__ = (function (){var G__19236 = cljs.core.dissoc.cljs$core$IFn$_invoke$arity$variadic(G__19222,cljs.core.cst$kw$states,cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([cljs.core.cst$kw$_STAR_state], 0));
+if(cljs.core.record_QMARK_(G__19222)){
+return cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,G__19236);
 } else {
-return G__19259;
+return G__19236;
 }
 })();
-return (new vocloj.state.impl.AtomStateMachine(cljs.core.cst$kw$states.cljs$core$IFn$_invoke$arity$1(G__19245),cljs.core.cst$kw$_STAR_state.cljs$core$IFn$_invoke$arity$1(G__19245),null,cljs.core.not_empty(extmap__4419__auto__),null));
+return (new vocloj.state.impl.AtomStateMachine(cljs.core.cst$kw$states.cljs$core$IFn$_invoke$arity$1(G__19222),cljs.core.cst$kw$_STAR_state.cljs$core$IFn$_invoke$arity$1(G__19222),null,cljs.core.not_empty(extmap__4419__auto__),null));
 });
 
