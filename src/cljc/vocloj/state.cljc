@@ -93,3 +93,30 @@
     atom-fn))
   ([]
    (create-synthesis-state-machine atom)))
+
+(defn create-microphone-stream-state-machine
+  ([atom-fn]
+   (create-atom-state-machine
+    {:dormant   {:error :error
+                 :init  :ready}
+     :error     {:error :error
+                 :init  :ready}
+     :stopped   {:error :error
+                 :init  :ready}
+     :ready     {:start :recording}
+     :recording {:end   :dormant
+                 :error :error
+                 :mute  :muted
+                 :pause :paused
+                 :stop  :stopped}
+     :muted     {:end    :dormant
+                 :stop   :stopped
+                 :unmute :recording}
+     :paused    {:end    :dormant
+                 :mute   :muted
+                 :resume :record
+                 :stop   :stopped}}
+    {:state :dormant :data nil}
+    atom-fn))
+  ([]
+   (create-microphone-stream-state-machine atom)))

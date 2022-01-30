@@ -19,7 +19,7 @@
 (defn recognizer [*state recog handler]
   (let [{:recog/keys [transcript]} @*state
         state (vocloj/current-state recog)]
-    [:div#recognition-container.container
+    [:div.recognition-container.container
      [:form.app__column.app__column--flex-start
       {:on-submit #(do
                      (.preventDefault %)

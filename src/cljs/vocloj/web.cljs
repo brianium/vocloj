@@ -79,3 +79,10 @@
    event listeners from being registered"
   [synth]
   (impl/remove-listeners synth))
+
+(defn create-microphone-stream
+  "Create a microphone stream that supports reading data from the user's microphone in browser."
+  ([]
+   (impl/create-microphone-stream))
+  ([atom-fn]
+   (impl/create-microphone-stream atom-fn)))

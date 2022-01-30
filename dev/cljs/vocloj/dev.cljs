@@ -2,6 +2,8 @@
   (:require [integrant.core :as ig]
             [reagent.core :as r]
             [reagent.dom :as rdom]
+            [vocloj.core :as volcloj.core]
+            [vocloj.dev.microphone :as mic :refer [microphone]]
             [vocloj.dev.recognizer :as recog :refer [recognizer]]
             [vocloj.dev.synthesizer :refer [synthesizer]]
             [vocloj.web :as web]))
@@ -9,29 +11,33 @@
 ;;; Demo application
 
 (defn nav
-  [screen *state]
-  [:nav.app_nav
-   [:ul
-    [:li {:class    ["nav-item" (when (= screen :synth) "nav-item--active")]
-          :on-click #(swap! *state assoc :nav/screen :synth)}
-     "Synthesis"]
-    [:li {:class    ["nav-item" (when (= screen :recognition) "nav-item--active")]
-          :on-click #(swap! *state assoc :nav/screen :recognition)}
-     "Recognition"]]])
+  [screen-id *state]
+  (let [items [{:text "Synthesis" :screen :synth}
+               {:text "Recognition" :screen :recognition}
+               {:text "Microphone" :screen :microphone}]]
+    [:nav.app_nav
+     [:ul
+      (for [{:keys [text screen]} items]
+        ^{:key screen} [:li {:class    ["nav-item" (when (= screen screen-id) "nav-item--active")]
+                             :on-click #(swap! *state assoc :nav/screen screen)}
+                        text])]]))
 
 (defn application
-  [*state synth recognition recog-handler]
+  [*state synth recognition recog-handler stream]
   (let [screen (:nav/screen @*state)]
     [:div.application
      [nav screen *state]
-     (if (= screen :synth)
-       [synthesizer *state synth]
-       [recognizer *state recognition recog-handler])]))
+     (case screen
+       :synth       [synthesizer *state synth]
+       :recognition [recognizer *state recognition recog-handler]
+       :microphone  [microphone *state stream])]))
 
 ;;; Dev System
 
 (def config
   {::state          {:nav/screen       :synth
+                     :mic/chunks       []
+                     :mic/recordings   []
                      :synth/voice-id   "Alex"
                      :synth/text       ""
                      :synth/pitch      1.0
@@ -41,12 +47,22 @@
    ::synthesizer    {}
    ::recognizer     {:options {:continuous? true}}
    ::recog-handler  {:state  (ig/ref ::state)}
+   ::microphone     {:state (ig/ref ::state)}
    ::ui             {:recog-handler (ig/ref ::recog-handler)
                      :state         (ig/ref ::state)
                      :synth         (ig/ref ::synthesizer)
-                     :recognizer    (ig/ref ::recognizer)}})
+                     :recognizer    (ig/ref ::recognizer)
+                     :stream        (ig/ref ::microphone)}})
 
+;;; A side-effect is used to update state with a new recording when the microphone has stopped.
+;;; This ensures that all available chunks have been received
 
+(defmethod ig/init-key ::microphone [_ {:keys [state]}]
+  (-> (vocloj.web/create-microphone-stream r/atom)
+      (vocloj.core/add-effect ::record :recording :stopped #(mic/create-recording state))))
+
+(defmethod ig/halt-key! ::microphone [_ stream]
+  (vocloj.core/stop stream))
 
 (defmethod ig/init-key ::recog-handler [_ {:keys [state]}]
   (fn [message]
@@ -67,9 +83,9 @@
 (defmethod ig/halt-key! ::synthesizer [_ synth]
   (web/remove-listeners synth))
 
-(defmethod ig/init-key ::ui [_ {:keys [state synth recognizer recog-handler]}]
-  (rdom/render 
-   [application state synth recognizer recog-handler]
+(defmethod ig/init-key ::ui [_ {:keys [state synth recognizer stream recog-handler]}]
+  (rdom/render
+   [application state synth recognizer recog-handler stream]
    (.getElementById js/document "application")))
 
 (defonce system (ig/init config))

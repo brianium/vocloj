@@ -24,6 +24,12 @@
    ```clojure
    (add-effect my-synthesizer ::resumed :paused :speaking on-resume)
    ```
+
+   The previous state value can also be a set of previous states:
+
+   ```clojure
+   (add-effect my-microphone ::init #{:dormant :stopped} :ready on-ready)
+   ```
    
    The add-effect function is useful for monitoring state changes or dispatching
    other effects in response to state changes."

@@ -3,13 +3,20 @@
                :cljs [cljs.core.async :as async])
             [vocloj.protocols :as p]))
 
+(defn from?
+  [prev state]
+  (cond
+    (set? prev) (prev state)
+    (keyword? prev) (= prev state)
+    :else nil))
+
 (defn add-effect
   ([sm key fn-3]
    (p/-add-effect sm key fn-3)
    sm)
   ([sm key from to fn-3]
    (add-effect sm key (fn [sm old new]
-                        (when (and (= from (:state old)) (= to (:state new)))
+                        (when (and (from? from (:state old)) (= to (:state new)))
                           (fn-3 sm old new))))))
 
 (defn transition
@@ -97,7 +104,7 @@
   synth)
 
 (defn speak
-  "Use the given speech synthesizer to speach the given utterance using a voice
+  "Use the given speech synthesizer to speech the given utterance using a voice
    identified by voice-id"
   [synth voice-id utterance]
   (p/-speak synth voice-id utterance)
