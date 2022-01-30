@@ -8,7 +8,7 @@ sweet sweet parens.
 ## Table of contents
 
 - [Using vocloj](#using-vocloj)
-    - [Web](#vocloj.web)
+    - [Web](#voclojweb)
 - [Demo](https://brianium.github.io/vocloj/)
   - [src](https://github.com/brianium/vocloj/blob/main/dev/cljs/vocloj/dev.cljs)
 - [API Docs](https://cljdoc.org/d/com.github.brianium/vocloj/CURRENT)
