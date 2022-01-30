@@ -35,8 +35,8 @@ goog.require('vocloj.state.impl');
  * Clojure's own atoms.
  */
 vocloj.state.create_atom_state_machine = (function vocloj$state$create_atom_state_machine(var_args){
-var G__19238 = arguments.length;
-switch (G__19238) {
+var G__19264 = arguments.length;
+switch (G__19264) {
 case 2:
 return vocloj.state.create_atom_state_machine.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -78,8 +78,8 @@ return vocloj.state.impl.__GT_AtomStateMachine(states,(atom_fn.cljs$core$IFn$_in
  * recognizer will do nothing until it is initialized then started.
  */
 vocloj.state.create_recognizer_state_machine = (function vocloj$state$create_recognizer_state_machine(var_args){
-var G__19241 = arguments.length;
-switch (G__19241) {
+var G__19267 = arguments.length;
+switch (G__19267) {
 case 1:
 return vocloj.state.create_recognizer_state_machine.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -124,8 +124,8 @@ return vocloj.state.create_recognizer_state_machine.cljs$core$IFn$_invoke$arity$
  * synthesizer will do nothing until it is initialized.
  */
 vocloj.state.create_synthesis_state_machine = (function vocloj$state$create_synthesis_state_machine(var_args){
-var G__19244 = arguments.length;
-switch (G__19244) {
+var G__19270 = arguments.length;
+switch (G__19270) {
 case 1:
 return vocloj.state.create_synthesis_state_machine.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -149,4 +149,31 @@ return vocloj.state.create_synthesis_state_machine.cljs$core$IFn$_invoke$arity$1
 }));
 
 (vocloj.state.create_synthesis_state_machine.cljs$lang$maxFixedArity = 1);
+
+vocloj.state.create_microphone_stream_state_machine = (function vocloj$state$create_microphone_stream_state_machine(var_args){
+var G__19273 = arguments.length;
+switch (G__19273) {
+case 1:
+return vocloj.state.create_microphone_stream_state_machine.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
+
+break;
+case 0:
+return vocloj.state.create_microphone_stream_state_machine.cljs$core$IFn$_invoke$arity$0();
+
+break;
+default:
+throw (new Error(["Invalid arity: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(arguments.length)].join('')));
+
+}
+});
+
+(vocloj.state.create_microphone_stream_state_machine.cljs$core$IFn$_invoke$arity$1 = (function (atom_fn){
+return vocloj.state.create_atom_state_machine.cljs$core$IFn$_invoke$arity$3(new cljs.core.PersistentArrayMap(null, 7, [cljs.core.cst$kw$dormant,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$error,cljs.core.cst$kw$error,cljs.core.cst$kw$init,cljs.core.cst$kw$ready], null),cljs.core.cst$kw$error,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$error,cljs.core.cst$kw$error,cljs.core.cst$kw$init,cljs.core.cst$kw$ready], null),cljs.core.cst$kw$stopped,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$error,cljs.core.cst$kw$error,cljs.core.cst$kw$init,cljs.core.cst$kw$ready], null),cljs.core.cst$kw$ready,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$start,cljs.core.cst$kw$recording], null),cljs.core.cst$kw$recording,new cljs.core.PersistentArrayMap(null, 5, [cljs.core.cst$kw$end,cljs.core.cst$kw$dormant,cljs.core.cst$kw$error,cljs.core.cst$kw$error,cljs.core.cst$kw$mute,cljs.core.cst$kw$muted,cljs.core.cst$kw$pause,cljs.core.cst$kw$paused,cljs.core.cst$kw$stop,cljs.core.cst$kw$stopped], null),cljs.core.cst$kw$muted,new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$end,cljs.core.cst$kw$dormant,cljs.core.cst$kw$stop,cljs.core.cst$kw$stopped,cljs.core.cst$kw$unmute,cljs.core.cst$kw$recording], null),cljs.core.cst$kw$paused,new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$end,cljs.core.cst$kw$dormant,cljs.core.cst$kw$mute,cljs.core.cst$kw$muted,cljs.core.cst$kw$resume,cljs.core.cst$kw$record,cljs.core.cst$kw$stop,cljs.core.cst$kw$stopped], null)], null),new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$state,cljs.core.cst$kw$dormant,cljs.core.cst$kw$data,null], null),atom_fn);
+}));
+
+(vocloj.state.create_microphone_stream_state_machine.cljs$core$IFn$_invoke$arity$0 = (function (){
+return vocloj.state.create_microphone_stream_state_machine.cljs$core$IFn$_invoke$arity$1(cljs.core.atom);
+}));
+
+(vocloj.state.create_microphone_stream_state_machine.cljs$lang$maxFixedArity = 1);
 

@@ -6,9 +6,9 @@ goog.require('cljs.core.constants');
 /**
  * @interface
  */
-vocloj.protocols.Initializes = function(){};
+vocloj.protocols.Initializable = function(){};
 
-var vocloj$protocols$Initializes$_init$dyn_13067 = (function (_){
+var vocloj$protocols$Initializable$_init$dyn_14561 = (function (_){
 var x__4428__auto__ = (((_ == null))?null:_);
 var m__4429__auto__ = (vocloj.protocols._init[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -18,7 +18,7 @@ var m__4426__auto__ = (vocloj.protocols._init["_"]);
 if((!((m__4426__auto__ == null)))){
 return (m__4426__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4426__auto__.cljs$core$IFn$_invoke$arity$1(_) : m__4426__auto__.call(null,_));
 } else {
-throw cljs.core.missing_protocol("Initializes.-init",_);
+throw cljs.core.missing_protocol("Initializable.-init",_);
 }
 }
 });
@@ -26,10 +26,10 @@ throw cljs.core.missing_protocol("Initializes.-init",_);
  * Initialize a type. Useful for setting up event streams and necessary resources
  */
 vocloj.protocols._init = (function vocloj$protocols$_init(_){
-if((((!((_ == null)))) && ((!((_.vocloj$protocols$Initializes$_init$arity$1 == null)))))){
-return _.vocloj$protocols$Initializes$_init$arity$1(_);
+if((((!((_ == null)))) && ((!((_.vocloj$protocols$Initializable$_init$arity$1 == null)))))){
+return _.vocloj$protocols$Initializable$_init$arity$1(_);
 } else {
-return vocloj$protocols$Initializes$_init$dyn_13067(_);
+return vocloj$protocols$Initializable$_init$dyn_14561(_);
 }
 });
 
@@ -37,9 +37,9 @@ return vocloj$protocols$Initializes$_init$dyn_13067(_);
 /**
  * @interface
  */
-vocloj.protocols.RecognizesSpeech = function(){};
+vocloj.protocols.Lifecycle = function(){};
 
-var vocloj$protocols$RecognizesSpeech$_start$dyn_13068 = (function (_){
+var vocloj$protocols$Lifecycle$_start$dyn_14562 = (function (_){
 var x__4428__auto__ = (((_ == null))?null:_);
 var m__4429__auto__ = (vocloj.protocols._start[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -49,22 +49,22 @@ var m__4426__auto__ = (vocloj.protocols._start["_"]);
 if((!((m__4426__auto__ == null)))){
 return (m__4426__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4426__auto__.cljs$core$IFn$_invoke$arity$1(_) : m__4426__auto__.call(null,_));
 } else {
-throw cljs.core.missing_protocol("RecognizesSpeech.-start",_);
+throw cljs.core.missing_protocol("Lifecycle.-start",_);
 }
 }
 });
 /**
- * Start speech recognition. Returns a channel that receives results
+ * Start a component
  */
 vocloj.protocols._start = (function vocloj$protocols$_start(_){
-if((((!((_ == null)))) && ((!((_.vocloj$protocols$RecognizesSpeech$_start$arity$1 == null)))))){
-return _.vocloj$protocols$RecognizesSpeech$_start$arity$1(_);
+if((((!((_ == null)))) && ((!((_.vocloj$protocols$Lifecycle$_start$arity$1 == null)))))){
+return _.vocloj$protocols$Lifecycle$_start$arity$1(_);
 } else {
-return vocloj$protocols$RecognizesSpeech$_start$dyn_13068(_);
+return vocloj$protocols$Lifecycle$_start$dyn_14562(_);
 }
 });
 
-var vocloj$protocols$RecognizesSpeech$_stop$dyn_13069 = (function (_){
+var vocloj$protocols$Lifecycle$_stop$dyn_14563 = (function (_){
 var x__4428__auto__ = (((_ == null))?null:_);
 var m__4429__auto__ = (vocloj.protocols._stop[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -74,18 +74,74 @@ var m__4426__auto__ = (vocloj.protocols._stop["_"]);
 if((!((m__4426__auto__ == null)))){
 return (m__4426__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4426__auto__.cljs$core$IFn$_invoke$arity$1(_) : m__4426__auto__.call(null,_));
 } else {
-throw cljs.core.missing_protocol("RecognizesSpeech.-stop",_);
+throw cljs.core.missing_protocol("Lifecycle.-stop",_);
 }
 }
 });
 /**
- * Stop attempting to recognize speech
+ * Stop a component
  */
 vocloj.protocols._stop = (function vocloj$protocols$_stop(_){
-if((((!((_ == null)))) && ((!((_.vocloj$protocols$RecognizesSpeech$_stop$arity$1 == null)))))){
-return _.vocloj$protocols$RecognizesSpeech$_stop$arity$1(_);
+if((((!((_ == null)))) && ((!((_.vocloj$protocols$Lifecycle$_stop$arity$1 == null)))))){
+return _.vocloj$protocols$Lifecycle$_stop$arity$1(_);
 } else {
-return vocloj$protocols$RecognizesSpeech$_stop$dyn_13069(_);
+return vocloj$protocols$Lifecycle$_stop$dyn_14563(_);
+}
+});
+
+
+/**
+ * @interface
+ */
+vocloj.protocols.Suspendable = function(){};
+
+var vocloj$protocols$Suspendable$_pause$dyn_14564 = (function (_){
+var x__4428__auto__ = (((_ == null))?null:_);
+var m__4429__auto__ = (vocloj.protocols._pause[goog.typeOf(x__4428__auto__)]);
+if((!((m__4429__auto__ == null)))){
+return (m__4429__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4429__auto__.cljs$core$IFn$_invoke$arity$1(_) : m__4429__auto__.call(null,_));
+} else {
+var m__4426__auto__ = (vocloj.protocols._pause["_"]);
+if((!((m__4426__auto__ == null)))){
+return (m__4426__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4426__auto__.cljs$core$IFn$_invoke$arity$1(_) : m__4426__auto__.call(null,_));
+} else {
+throw cljs.core.missing_protocol("Suspendable.-pause",_);
+}
+}
+});
+/**
+ * Pause a component
+ */
+vocloj.protocols._pause = (function vocloj$protocols$_pause(_){
+if((((!((_ == null)))) && ((!((_.vocloj$protocols$Suspendable$_pause$arity$1 == null)))))){
+return _.vocloj$protocols$Suspendable$_pause$arity$1(_);
+} else {
+return vocloj$protocols$Suspendable$_pause$dyn_14564(_);
+}
+});
+
+var vocloj$protocols$Suspendable$_resume$dyn_14565 = (function (_){
+var x__4428__auto__ = (((_ == null))?null:_);
+var m__4429__auto__ = (vocloj.protocols._resume[goog.typeOf(x__4428__auto__)]);
+if((!((m__4429__auto__ == null)))){
+return (m__4429__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4429__auto__.cljs$core$IFn$_invoke$arity$1(_) : m__4429__auto__.call(null,_));
+} else {
+var m__4426__auto__ = (vocloj.protocols._resume["_"]);
+if((!((m__4426__auto__ == null)))){
+return (m__4426__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4426__auto__.cljs$core$IFn$_invoke$arity$1(_) : m__4426__auto__.call(null,_));
+} else {
+throw cljs.core.missing_protocol("Suspendable.-resume",_);
+}
+}
+});
+/**
+ * Resume a component
+ */
+vocloj.protocols._resume = (function vocloj$protocols$_resume(_){
+if((((!((_ == null)))) && ((!((_.vocloj$protocols$Suspendable$_resume$arity$1 == null)))))){
+return _.vocloj$protocols$Suspendable$_resume$arity$1(_);
+} else {
+return vocloj$protocols$Suspendable$_resume$dyn_14565(_);
 }
 });
 
@@ -95,7 +151,7 @@ return vocloj$protocols$RecognizesSpeech$_stop$dyn_13069(_);
  */
 vocloj.protocols.SynthesizesSpeech = function(){};
 
-var vocloj$protocols$SynthesizesSpeech$_cancel$dyn_13070 = (function (_){
+var vocloj$protocols$SynthesizesSpeech$_cancel$dyn_14566 = (function (_){
 var x__4428__auto__ = (((_ == null))?null:_);
 var m__4429__auto__ = (vocloj.protocols._cancel[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -116,61 +172,11 @@ vocloj.protocols._cancel = (function vocloj$protocols$_cancel(_){
 if((((!((_ == null)))) && ((!((_.vocloj$protocols$SynthesizesSpeech$_cancel$arity$1 == null)))))){
 return _.vocloj$protocols$SynthesizesSpeech$_cancel$arity$1(_);
 } else {
-return vocloj$protocols$SynthesizesSpeech$_cancel$dyn_13070(_);
+return vocloj$protocols$SynthesizesSpeech$_cancel$dyn_14566(_);
 }
 });
 
-var vocloj$protocols$SynthesizesSpeech$_pause$dyn_13071 = (function (_){
-var x__4428__auto__ = (((_ == null))?null:_);
-var m__4429__auto__ = (vocloj.protocols._pause[goog.typeOf(x__4428__auto__)]);
-if((!((m__4429__auto__ == null)))){
-return (m__4429__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4429__auto__.cljs$core$IFn$_invoke$arity$1(_) : m__4429__auto__.call(null,_));
-} else {
-var m__4426__auto__ = (vocloj.protocols._pause["_"]);
-if((!((m__4426__auto__ == null)))){
-return (m__4426__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4426__auto__.cljs$core$IFn$_invoke$arity$1(_) : m__4426__auto__.call(null,_));
-} else {
-throw cljs.core.missing_protocol("SynthesizesSpeech.-pause",_);
-}
-}
-});
-/**
- * Pause the currently spoken utterance
- */
-vocloj.protocols._pause = (function vocloj$protocols$_pause(_){
-if((((!((_ == null)))) && ((!((_.vocloj$protocols$SynthesizesSpeech$_pause$arity$1 == null)))))){
-return _.vocloj$protocols$SynthesizesSpeech$_pause$arity$1(_);
-} else {
-return vocloj$protocols$SynthesizesSpeech$_pause$dyn_13071(_);
-}
-});
-
-var vocloj$protocols$SynthesizesSpeech$_resume$dyn_13072 = (function (_){
-var x__4428__auto__ = (((_ == null))?null:_);
-var m__4429__auto__ = (vocloj.protocols._resume[goog.typeOf(x__4428__auto__)]);
-if((!((m__4429__auto__ == null)))){
-return (m__4429__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4429__auto__.cljs$core$IFn$_invoke$arity$1(_) : m__4429__auto__.call(null,_));
-} else {
-var m__4426__auto__ = (vocloj.protocols._resume["_"]);
-if((!((m__4426__auto__ == null)))){
-return (m__4426__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4426__auto__.cljs$core$IFn$_invoke$arity$1(_) : m__4426__auto__.call(null,_));
-} else {
-throw cljs.core.missing_protocol("SynthesizesSpeech.-resume",_);
-}
-}
-});
-/**
- * Resume a paused utterance
- */
-vocloj.protocols._resume = (function vocloj$protocols$_resume(_){
-if((((!((_ == null)))) && ((!((_.vocloj$protocols$SynthesizesSpeech$_resume$arity$1 == null)))))){
-return _.vocloj$protocols$SynthesizesSpeech$_resume$arity$1(_);
-} else {
-return vocloj$protocols$SynthesizesSpeech$_resume$dyn_13072(_);
-}
-});
-
-var vocloj$protocols$SynthesizesSpeech$_speak$dyn_13073 = (function (_,voice_id,utterance){
+var vocloj$protocols$SynthesizesSpeech$_speak$dyn_14567 = (function (_,voice_id,utterance){
 var x__4428__auto__ = (((_ == null))?null:_);
 var m__4429__auto__ = (vocloj.protocols._speak[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -191,7 +197,7 @@ vocloj.protocols._speak = (function vocloj$protocols$_speak(_,voice_id,utterance
 if((((!((_ == null)))) && ((!((_.vocloj$protocols$SynthesizesSpeech$_speak$arity$3 == null)))))){
 return _.vocloj$protocols$SynthesizesSpeech$_speak$arity$3(_,voice_id,utterance);
 } else {
-return vocloj$protocols$SynthesizesSpeech$_speak$dyn_13073(_,voice_id,utterance);
+return vocloj$protocols$SynthesizesSpeech$_speak$dyn_14567(_,voice_id,utterance);
 }
 });
 
@@ -201,7 +207,7 @@ return vocloj$protocols$SynthesizesSpeech$_speak$dyn_13073(_,voice_id,utterance)
  */
 vocloj.protocols.StateMachine = function(){};
 
-var vocloj$protocols$StateMachine$_add_effect$dyn_13074 = (function (_,key,fn_3){
+var vocloj$protocols$StateMachine$_add_effect$dyn_14568 = (function (_,key,fn_3){
 var x__4428__auto__ = (((_ == null))?null:_);
 var m__4429__auto__ = (vocloj.protocols._add_effect[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -222,11 +228,11 @@ vocloj.protocols._add_effect = (function vocloj$protocols$_add_effect(_,key,fn_3
 if((((!((_ == null)))) && ((!((_.vocloj$protocols$StateMachine$_add_effect$arity$3 == null)))))){
 return _.vocloj$protocols$StateMachine$_add_effect$arity$3(_,key,fn_3);
 } else {
-return vocloj$protocols$StateMachine$_add_effect$dyn_13074(_,key,fn_3);
+return vocloj$protocols$StateMachine$_add_effect$dyn_14568(_,key,fn_3);
 }
 });
 
-var vocloj$protocols$StateMachine$_transition$dyn_13075 = (function (_,event,payload){
+var vocloj$protocols$StateMachine$_transition$dyn_14569 = (function (_,event,payload){
 var x__4428__auto__ = (((_ == null))?null:_);
 var m__4429__auto__ = (vocloj.protocols._transition[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -247,11 +253,11 @@ vocloj.protocols._transition = (function vocloj$protocols$_transition(_,event,pa
 if((((!((_ == null)))) && ((!((_.vocloj$protocols$StateMachine$_transition$arity$3 == null)))))){
 return _.vocloj$protocols$StateMachine$_transition$arity$3(_,event,payload);
 } else {
-return vocloj$protocols$StateMachine$_transition$dyn_13075(_,event,payload);
+return vocloj$protocols$StateMachine$_transition$dyn_14569(_,event,payload);
 }
 });
 
-var vocloj$protocols$StateMachine$_current_state$dyn_13076 = (function (_){
+var vocloj$protocols$StateMachine$_current_state$dyn_14570 = (function (_){
 var x__4428__auto__ = (((_ == null))?null:_);
 var m__4429__auto__ = (vocloj.protocols._current_state[goog.typeOf(x__4428__auto__)]);
 if((!((m__4429__auto__ == null)))){
@@ -272,7 +278,88 @@ vocloj.protocols._current_state = (function vocloj$protocols$_current_state(_){
 if((((!((_ == null)))) && ((!((_.vocloj$protocols$StateMachine$_current_state$arity$1 == null)))))){
 return _.vocloj$protocols$StateMachine$_current_state$arity$1(_);
 } else {
-return vocloj$protocols$StateMachine$_current_state$dyn_13076(_);
+return vocloj$protocols$StateMachine$_current_state$dyn_14570(_);
+}
+});
+
+
+/**
+ * @interface
+ */
+vocloj.protocols.ReceivesSpeech = function(){};
+
+var vocloj$protocols$ReceivesSpeech$_get_speech_channel$dyn_14571 = (function (_){
+var x__4428__auto__ = (((_ == null))?null:_);
+var m__4429__auto__ = (vocloj.protocols._get_speech_channel[goog.typeOf(x__4428__auto__)]);
+if((!((m__4429__auto__ == null)))){
+return (m__4429__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4429__auto__.cljs$core$IFn$_invoke$arity$1(_) : m__4429__auto__.call(null,_));
+} else {
+var m__4426__auto__ = (vocloj.protocols._get_speech_channel["_"]);
+if((!((m__4426__auto__ == null)))){
+return (m__4426__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4426__auto__.cljs$core$IFn$_invoke$arity$1(_) : m__4426__auto__.call(null,_));
+} else {
+throw cljs.core.missing_protocol("ReceivesSpeech.-get-speech-channel",_);
+}
+}
+});
+/**
+ * Returns a channel that receives speech data
+ */
+vocloj.protocols._get_speech_channel = (function vocloj$protocols$_get_speech_channel(_){
+if((((!((_ == null)))) && ((!((_.vocloj$protocols$ReceivesSpeech$_get_speech_channel$arity$1 == null)))))){
+return _.vocloj$protocols$ReceivesSpeech$_get_speech_channel$arity$1(_);
+} else {
+return vocloj$protocols$ReceivesSpeech$_get_speech_channel$dyn_14571(_);
+}
+});
+
+var vocloj$protocols$ReceivesSpeech$_listen$dyn_14572 = (function (_){
+var x__4428__auto__ = (((_ == null))?null:_);
+var m__4429__auto__ = (vocloj.protocols._listen[goog.typeOf(x__4428__auto__)]);
+if((!((m__4429__auto__ == null)))){
+return (m__4429__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4429__auto__.cljs$core$IFn$_invoke$arity$1(_) : m__4429__auto__.call(null,_));
+} else {
+var m__4426__auto__ = (vocloj.protocols._listen["_"]);
+if((!((m__4426__auto__ == null)))){
+return (m__4426__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4426__auto__.cljs$core$IFn$_invoke$arity$1(_) : m__4426__auto__.call(null,_));
+} else {
+throw cljs.core.missing_protocol("ReceivesSpeech.-listen",_);
+}
+}
+});
+/**
+ * Start listening for speech
+ */
+vocloj.protocols._listen = (function vocloj$protocols$_listen(_){
+if((((!((_ == null)))) && ((!((_.vocloj$protocols$ReceivesSpeech$_listen$arity$1 == null)))))){
+return _.vocloj$protocols$ReceivesSpeech$_listen$arity$1(_);
+} else {
+return vocloj$protocols$ReceivesSpeech$_listen$dyn_14572(_);
+}
+});
+
+var vocloj$protocols$ReceivesSpeech$_get_stop_channel$dyn_14573 = (function (_){
+var x__4428__auto__ = (((_ == null))?null:_);
+var m__4429__auto__ = (vocloj.protocols._get_stop_channel[goog.typeOf(x__4428__auto__)]);
+if((!((m__4429__auto__ == null)))){
+return (m__4429__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4429__auto__.cljs$core$IFn$_invoke$arity$1(_) : m__4429__auto__.call(null,_));
+} else {
+var m__4426__auto__ = (vocloj.protocols._get_stop_channel["_"]);
+if((!((m__4426__auto__ == null)))){
+return (m__4426__auto__.cljs$core$IFn$_invoke$arity$1 ? m__4426__auto__.cljs$core$IFn$_invoke$arity$1(_) : m__4426__auto__.call(null,_));
+} else {
+throw cljs.core.missing_protocol("ReceivesSpeech.-get-stop-channel",_);
+}
+}
+});
+/**
+ * Return a channel that receives stop signals
+ */
+vocloj.protocols._get_stop_channel = (function vocloj$protocols$_get_stop_channel(_){
+if((((!((_ == null)))) && ((!((_.vocloj$protocols$ReceivesSpeech$_get_stop_channel$arity$1 == null)))))){
+return _.vocloj$protocols$ReceivesSpeech$_get_stop_channel$arity$1(_);
+} else {
+return vocloj$protocols$ReceivesSpeech$_get_stop_channel$dyn_14573(_);
 }
 });
 

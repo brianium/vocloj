@@ -25,12 +25,18 @@ goog.require('vocloj.core.impl');
  * (add-effect my-synthesizer ::resumed :paused :speaking on-resume)
  * ```
  * 
+ * The previous state value can also be a set of previous states:
+ * 
+ * ```clojure
+ * (add-effect my-microphone ::init #{:dormant :stopped} :ready on-ready)
+ * ```
+ * 
  * The add-effect function is useful for monitoring state changes or dispatching
  * other effects in response to state changes.
  */
 vocloj.core.add_effect = (function vocloj$core$add_effect(var_args){
-var G__18701 = arguments.length;
-switch (G__18701) {
+var G__18540 = arguments.length;
+switch (G__18540) {
 case 3:
 return vocloj.core.add_effect.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 
@@ -83,8 +89,8 @@ return vocloj.core.impl.add_effect.cljs$core$IFn$_invoke$arity$5(sm,key,from,to,
  * ```
  */
 vocloj.core.transition = (function vocloj$core$transition(var_args){
-var G__18704 = arguments.length;
-switch (G__18704) {
+var G__18543 = arguments.length;
+switch (G__18543) {
 case 3:
 return vocloj.core.transition.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 
@@ -196,8 +202,8 @@ return vocloj.core.impl.stop(recognizer);
  * ```
  */
 vocloj.core.listen = (function vocloj$core$listen(var_args){
-var G__18707 = arguments.length;
-switch (G__18707) {
+var G__18546 = arguments.length;
+switch (G__18546) {
 case 1:
 return vocloj.core.listen.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 

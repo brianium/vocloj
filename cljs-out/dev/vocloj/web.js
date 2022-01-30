@@ -32,8 +32,8 @@ goog.require('vocloj.web.impl');
  * ```
  */
 vocloj.web.create_recognizer = (function vocloj$web$create_recognizer(var_args){
-var G__19401 = arguments.length;
-switch (G__19401) {
+var G__19539 = arguments.length;
+switch (G__19539) {
 case 0:
 return vocloj.web.create_recognizer.cljs$core$IFn$_invoke$arity$0();
 
@@ -97,8 +97,8 @@ return vocloj.web.impl.create_recognizer.cljs$core$IFn$_invoke$arity$2(options,a
  *   :volume - float?
  */
 vocloj.web.create_synthesizer = (function vocloj$web$create_synthesizer(var_args){
-var G__19404 = arguments.length;
-switch (G__19404) {
+var G__19542 = arguments.length;
+switch (G__19542) {
 case 0:
 return vocloj.web.create_synthesizer.cljs$core$IFn$_invoke$arity$0();
 
@@ -133,3 +133,33 @@ return vocloj.web.impl.create_synthesizer.cljs$core$IFn$_invoke$arity$1(atom_fn)
 vocloj.web.remove_listeners = (function vocloj$web$remove_listeners(synth){
 return vocloj.web.impl.remove_listeners(synth);
 });
+/**
+ * Create a microphone stream that supports reading data from the user's microphone in browser.
+ */
+vocloj.web.create_microphone_stream = (function vocloj$web$create_microphone_stream(var_args){
+var G__19545 = arguments.length;
+switch (G__19545) {
+case 0:
+return vocloj.web.create_microphone_stream.cljs$core$IFn$_invoke$arity$0();
+
+break;
+case 1:
+return vocloj.web.create_microphone_stream.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
+
+break;
+default:
+throw (new Error(["Invalid arity: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(arguments.length)].join('')));
+
+}
+});
+
+(vocloj.web.create_microphone_stream.cljs$core$IFn$_invoke$arity$0 = (function (){
+return vocloj.web.impl.create_microphone_stream.cljs$core$IFn$_invoke$arity$0();
+}));
+
+(vocloj.web.create_microphone_stream.cljs$core$IFn$_invoke$arity$1 = (function (atom_fn){
+return vocloj.web.impl.create_microphone_stream.cljs$core$IFn$_invoke$arity$1(atom_fn);
+}));
+
+(vocloj.web.create_microphone_stream.cljs$lang$maxFixedArity = 1);
+
