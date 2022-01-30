@@ -9,12 +9,15 @@ sweet sweet parens.
 
 - [Using vocloj](#using-vocloj)
     - [Web](#vocloj.web)
+- [Demo](https://brianium.github.io/vocloj/)
+  - [src](https://github.com/brianium/vocloj/blob/main/dev/cljs/vocloj/dev.cljs)
 - [API Docs](https://cljdoc.org/d/com.github.brianium/vocloj/CURRENT)
 - [State machines](#state-machines)
     - [add-effect](#add-effect)
     - [current-state](#current-state)
 - [Recognition](#recognition)
 - [Synthesis](#synthesis)
+- [Microphone Streams](#microphone-streams)
 
 ## Using vocloj
 
@@ -136,3 +139,29 @@ See API docs for all functions and options.
 ```
 
 See API docs for all functions and options.
+
+## Microphone Streams
+
+Microphone streams are started and stopped. The easiest way to leverage a stream is to create one and use
+`vocloj.core/listen` to obtain a channel or use a callback.
+
+```clojure
+(require '[vocloj.core :as vocloj.core]
+         '[vocloj.web :as vocloj.web])
+
+(def stream (vocloj.web/create-microphone-stream))
+
+(vocloj.core/listen stream #(println %))
+
+;; Omitting a handler will return a core.async channel
+
+(let [ch (vocloj.core/listen stream)]
+  (go-loop []
+    (println (<! ch))))
+
+(vocloj.core/stop stream) ;; stop listening
+```
+
+The microphone stream is named for the [MediaStream](https://developer.mozilla.org/en-US/docs/Web/API/MediaStream) API. However, the current implementation provides chunks of js Blobs on channel via the [MediaRecorder](https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder) API. 
+
+Future iterations will be targeting true streaming via [AudioWorklets](https://developer.mozilla.org/en-US/docs/Web/API/AudioWorklet).
