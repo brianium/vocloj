@@ -3,7 +3,8 @@
             [cljs.core.async :as async]
             [vocloj.core :as core]
             [vocloj.protocols :refer [StateMachine Lifecycle Suspendable Initializable SynthesizesSpeech ReceivesSpeech]]
-            [vocloj.state :as state]))
+            [vocloj.state :as state]
+            [vocloj.web.impl.microphone :as mic.impl]))
 
 (defn current-data
   "Utility for getting data from a state machine"
@@ -311,21 +312,20 @@
   Lifecycle
   (-start
     [this]
-    (let [{:keys [ready-ch]} (current-data this)]
+    (let [{:keys [ready-ch] :as current-data} (current-data this)]
       (async/go
-        (let [stream (async/<! ready-ch)]
-          (core/transition this :start (-> this
-                                           current-data
-                                           (merge {:media/recorder     (js/MediaRecorder. stream)
-                                                   :media/audio-tracks (array-seq (.getAudioTracks stream))
-                                                   :media/stream       stream})))))))
+        (let [stream   (async/<! ready-ch)
+              recorder (mic.impl/create-media-recorder stream current-data)]
+          (core/transition this :start (merge current-data {:media/recorder     recorder
+                                                            :media/audio-tracks (array-seq (.getAudioTracks stream))
+                                                            :media/stream       stream}))))))
 
   (-stop
     [this]
     (let [{:media/keys [recorder]
            :keys       [speech-ping]} (current-data this)
           timeout      (async/timeout 1000)]
-      (.stop recorder) ; Stop the recorder here - as opposed to a side effect - because data events come AFTER the recorder is stopped.
+      (core/stop recorder) ; Stop the recorder here - as opposed to a side effect - because data events may come AFTER the recorder is stopped.
       (async/go []
                 (async/alts! [speech-ping timeout]) ; Wait for any last bits of audio data to become available before stopping
                 (core/transition this :stop current-data))))
@@ -344,17 +344,15 @@
     (listen* this)))
 
 (defn on-microphone-recording
-  [_ _ {{:listener/keys [dataavailable error end mute unmute pause resume]
+  [_ _ {{:listener/keys [end mute unmute]
          :media/keys    [recorder audio-tracks]} :data}]
-  (.addEventListener recorder "dataavailable" dataavailable)
-  (.addEventListener recorder "error" error)
-  (.addEventListener recorder "pause" pause)
-  (.addEventListener recorder "resume" resume)
   (doseq [track audio-tracks]
     (.addEventListener track "end" end)
     (.addEventListener track "mute" mute)
     (.addEventListener track "unmute" unmute))
-  (.start recorder))
+  (-> recorder
+      core/init
+      core/start))
 
 (defn on-microphone-stop
   [_ _ {{:media/keys [audio-tracks] :keys [stop-ch]} :data}]
@@ -374,11 +372,11 @@
 
 (defn on-microphone-pause
   [_ _ {{:media/keys [recorder]} :data}]
-  (.pause recorder))
+  (core/pause recorder))
 
 (defn on-microphone-resume
   [_ _ {{:media/keys [recorder]} :data}]
-  (.resume recorder))
+  (core/resume recorder))
 
 (defn create-microphone-stream
   ([]
