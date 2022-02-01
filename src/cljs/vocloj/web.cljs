@@ -53,7 +53,7 @@
    (create-synthesizer)
    ```
    
-   When called with two arguments, an atom-fn can be given. This may be useful
+   When called with one argument, an atom-fn can be given. This may be useful
    for using an alternative atom function like reagent's \"ratoms\".
    
    ```clojure
@@ -90,21 +90,35 @@
 (defn create-microphone-stream
   "Create a microphone stream backed by native browser apis.
    
-   When called with no arguments, a default microphone stream will be returned.
+   When called with no arguments, a default microphone stream will be returned. Default
+   microphone streams receive data intermittently via the [MediaStream Recording API](https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API).
+
+   The speech results put on channel will individually be a js array, or chunk, of browser native Blob objects.
 
    ```clojure
    (create-microphone-stream)
    ```
+
+   When called with one argument, an options map can be given. The following keys are supported:
+
+     :processor - string?
    
-   When called with two arguments, an atom-fn can be given. This may be useful
+   The :processor key must be a URI to an [AudioWorkletProcessor](https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletProcessor) implementation.
+
+   If a :processor key is given, the MediaStream Recording API will not be used, and audio results will be received
+   as Float32 sample arrays as they become available.
+
+   An example implementation can be found [here](https://gist.github.com/brianium/068e821ad526244bf044b4b3a42ea259).
+
+   When called with two arguments, an atom-fn can be given in addition to an options map. This may be useful
    for using an alternative atom function like reagent's \"ratoms\".
    
    ```clojure
-   (create-microphone-stream r/atom)
-   ```
-   
-   The speech results put on channel will individually be a js array, or chunk, of browser native Blob objects."
+   (create-microphone-stream options r/atom)
+   ```"
   ([]
    (impl/create-microphone-stream))
-  ([atom-fn]
-   (impl/create-microphone-stream atom-fn)))
+  ([options]
+   (impl/create-microphone-stream options))
+  ([options atom-fn]
+   (impl/create-microphone-stream options atom-fn)))

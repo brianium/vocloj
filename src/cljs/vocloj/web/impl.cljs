@@ -246,8 +246,9 @@
   "A microphone may send audio events after it has been \"stopped\". This function
   creates the typical speech channel, but creates a mult so the stream implementation is
   able to block for data events before signaling the stop channel"
-  [sz]
-  (let [speech-write (async/chan sz)
+  [context]
+  (let [sz           (if context (.-sampleRate context) 1)
+        speech-write (async/chan sz)
         speech-read  (async/chan sz)
         speech-ping  (async/chan sz)
         mult         (async/mult speech-write)]
@@ -255,7 +256,7 @@
     (async/tap mult speech-ping)
     [speech-write speech-read speech-ping]))
 
-(defrecord WebMicrophoneStream [state-machine]
+(defrecord WebMicrophoneStream [state-machine options]
   StateMachine
   (-transition
     [_ event payload]
@@ -272,13 +273,16 @@
   Initializable
   (-init
     [this]
-    (let [[write read ping]   (create-speech-channels 1)
+    (let [processor           (:processor options)
+          context             (when processor (mic.impl/create-context))
+          [write read ping]   (create-speech-channels context)
           error-ch            (async/chan 1)
           stop-ch             (async/chan)
           ready-ch            (async/chan)
           media-devices       (.. js/navigator -mediaDevices)
 
-          on-dataavailable    #(async/put! write (.-data %))
+          on-dataavailable    #(async/go
+                                 (async/>! write (.-data %)))
 
           on-end              #(core/transition this :end current-data)
 
@@ -293,7 +297,9 @@
           on-resume           #(core/transition this :resume current-data)
 
           promise             (.getUserMedia media-devices #js {:audio true})]
-      (core/transition this :init {:error-ch               error-ch
+      (core/transition this :init {:context                context
+                                   :error-ch               error-ch
+                                   :processor              processor
                                    :speech-ch              read
                                    :speech-ping            ping
                                    :stop-ch                stop-ch
@@ -312,11 +318,11 @@
   Lifecycle
   (-start
     [this]
-    (let [{:keys [ready-ch] :as current-data} (current-data this)]
+    (let [{:keys [ready-ch] :as current-data} (current-data this)
+          recorder-options (select-keys current-data [:context :processor])]
       (async/go
-        (let [stream   (async/<! ready-ch)
-              recorder (mic.impl/create-media-recorder stream current-data)]
-          (core/transition this :start (merge current-data {:media/recorder     recorder
+        (let [stream (async/<! ready-ch)]
+          (core/transition this :start (merge current-data {:media/recorder     (async/<! (mic.impl/create-recorder stream this recorder-options))
                                                             :media/audio-tracks (array-seq (.getAudioTracks stream))
                                                             :media/stream       stream}))))))
 
@@ -380,10 +386,12 @@
 
 (defn create-microphone-stream
   ([]
-   (create-microphone-stream atom))
-  ([atom-fn]
+   (create-microphone-stream {}))
+  ([options]
+   (create-microphone-stream options atom))
+  ([options atom-fn]
    (-> (state/create-microphone-stream-state-machine atom-fn)
-       (->WebMicrophoneStream)
+       (->WebMicrophoneStream options)
        (core/add-effect :start :ready :recording on-microphone-recording)
        (core/add-effect :stop #{:recording :paused :muted} :stopped on-microphone-stop)
        (core/add-effect :mute #{:recording :paused} :muted on-microphone-muted)

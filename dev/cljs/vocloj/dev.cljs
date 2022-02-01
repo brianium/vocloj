@@ -47,7 +47,8 @@
    ::synthesizer    {:state (ig/ref ::state)}
    ::recognizer     {:options {:continuous? true}}
    ::recog-handler  {:state  (ig/ref ::state)}
-   ::microphone     {:state (ig/ref ::state)}
+   ::microphone     {:options {}
+                     :state   (ig/ref ::state)}
    ::ui             {:recog-handler (ig/ref ::recog-handler)
                      :state         (ig/ref ::state)
                      :synth         (ig/ref ::synthesizer)
@@ -57,8 +58,8 @@
 ;;; A side-effect is used to update state with a new recording when the microphone has stopped.
 ;;; This ensures that all available chunks have been received
 
-(defmethod ig/init-key ::microphone [_ {:keys [state]}]
-  (-> (vocloj.web/create-microphone-stream r/atom)
+(defmethod ig/init-key ::microphone [_ {:keys [options state]}]
+  (-> (vocloj.web/create-microphone-stream options r/atom)
       (vocloj.core/add-effect ::record :recording :stopped #(mic/create-recording state))))
 
 (defmethod ig/halt-key! ::microphone [_ stream]
